@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SOAP_dontDropIt.Models;
+using System.Xml;
 
 namespace SOAP_dontDropIt.Controllers
 {
@@ -24,17 +25,31 @@ namespace SOAP_dontDropIt.Controllers
         // GET: CalculateFee/Create
         public ActionResult Create()
         {
-            return View(new CalculateFeeModels());
+            //CalculateFeeModels.FEE calFee = new CalculateFeeModels.FEE();
+            //CalculateFeeModels.FEELINEITEM calFeeLineItem = new
+            //this is where we would stub our data on the get
+            return View();
         }
 
         // POST: CalculateFee/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(CalculateFeeModels.FEE collection)
         {
             try
             {
-                // TODO: Add insert logic here
-
+                //TODO: check first to see if accountId exists. If so they have account already enrolled, offer an edit screen//
+                //await DocumentDBRepository<CustomerInfo>.CreateCustomerDocumentsAsync(Repository.GetCustomerInfo());
+                //dev-web reference//www-dev/magic-services/
+                //com.collectorsolutions.magic.ProcessingGateway ws = new com.collectorsolutions.magic.ProcessingGateway(); //The web service
+                //Vero test client key//CIID 53dd564b
+                XmlDocument xmlRequest = new XmlDocument();
+                XmlDocument xmlResponse = new XmlDocument();
+                string xml = collection.ToString();
+                xmlRequest.LoadXml(xml);
+                //xmlResponse.LoadXml(ws.calculateFee(xmlRequest).OuterXml);
+                string responseCode = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE").InnerText;
+                string fee = xmlResponse.DocumentElement.SelectSingleNode("TRANSACTIONID").InnerText;
+                ViewData["feeAmount"] = fee;
                 return RedirectToAction("Index");
             }
             catch
