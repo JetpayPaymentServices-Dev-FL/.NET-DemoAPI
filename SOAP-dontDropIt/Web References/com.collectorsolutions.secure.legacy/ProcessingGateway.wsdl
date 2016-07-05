@@ -1,0 +1,3050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The CSI ProcessingGateway webservice provides our clients with multiple utilities that facilitate the real-time processing and management of internet based credit card and echeck transactions.This service is intended for the use of current CSI clients ONLY. Any unauthorized use is strictly prohibited.</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway">
+      <s:element name="VT_Transaction_POST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPost">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_POSTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_POSTResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_CreateToken_POST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPost">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_CreateToken_POSTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_CreateToken_POSTResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_CreateToken_GET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGet">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_CreateToken_GETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_CreateToken_GETResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GET_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_GET" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GET_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_GET_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_POST_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_POST" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_POST_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_POST_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGet">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_GETResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_POST_Manatron">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPost">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_POST_ManatronResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_POST_ManatronResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GET_Manatron">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGet">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VT_Transaction_GET_ManatronResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VT_Transaction_GET_ManatronResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPaymentInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPost" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPaymentInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendPaymentInformationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPaymentVerificationRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPost" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendPaymentVerificationRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendPaymentVerificationRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentCategoriesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentTypesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTEST" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="test_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculatefee_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_Fee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculatefee_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calculatefee_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculatefee_nonNET_XMLObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_Fee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculatefee_nonNET_XMLObjectResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calculatefee_nonNET_XMLObjectResponseResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransaction_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_Transaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransaction_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processTransaction_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransaction_nonNET_XMLObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_Transaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransaction_nonNET_XMLObjectResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processTransaction_nonNET_XMLObjectResponseResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processCredit_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_Credit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processCredit_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCredit_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_ExportRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_DetailedTransactions_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_Update_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_ExportRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_Update_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_DetailedTransactions_Update_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_FeeStructure_CreditCards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_CCFeeRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_FeeStructure_CreditCardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_FeeStructure_CreditCardsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDebitAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDebitAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDebitAccountResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDebitAccountHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlDoc">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDebitAccountHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDebitAccountHistoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculateFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlFee">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="calculateFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="calculateFeeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlExportRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_DetailedTransactionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyPaymentID_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_VerifyRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyPaymentID_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyPaymentID_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyTransaction_nonNET">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML_VerifyRequest" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyTransaction_nonNETResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyTransaction_nonNETResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlVerifyRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyTransactionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlExportRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_DetailedTransactions_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_DetailedTransactions_UpdateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_checkReturns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlExportRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_checkReturnsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_checkReturnsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_creditCardCredits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlExportRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_creditCardCreditsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_creditCardCreditsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_checkCredits">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlExportRequest">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="export_checkCreditsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="export_checkCreditsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyPaymentID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPaymentID">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="verifyPaymentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="verifyPaymentIDResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processHarrisTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlTransaction">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processHarrisTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processHarrisTransactionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlTransaction">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processTransactionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processCredit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlCredit">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processCreditResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processCreditResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPaymentIDLookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPaymentIDLookUp">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPaymentIDLookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertPaymentIDLookupResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePaymentIDLookup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlPaymentIDLookUp">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="deletePaymentIDLookupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deletePaymentIDLookupResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="process_CC_Credit_Vantiv_LITE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strClientKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dblAmountToBeCredited" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTransactionID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCollectionMode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intVoidCredit" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCardType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="process_CC_Credit_Vantiv_LITEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="process_CC_Credit_Vantiv_LITEResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recurringTransaction_TokenCreation_nonNet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recurringTransaction_TokenCreation_nonNetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recurringTransaction_TokenCreation_nonNetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recurringTransaction_TokenCreation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlTransaction">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="recurringTransaction_TokenCreationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="recurringTransaction_TokenCreationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateToken_nonNet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateToken_nonNetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateToken_nonNetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlTransaction">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processRecurringTransaction_ByToken_nonNet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransaction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processRecurringTransaction_ByToken_nonNetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processRecurringTransaction_ByToken_nonNetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processRecurringTransaction_ByToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlTransaction">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="processRecurringTransaction_ByTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="processRecurringTransaction_ByTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VT_Transaction_POSTSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POST" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POSTSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_CreateToken_POSTSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_CreateToken_POST" />
+  </wsdl:message>
+  <wsdl:message name="VT_CreateToken_POSTSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_CreateToken_POSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_CreateToken_GETSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_CreateToken_GET" />
+  </wsdl:message>
+  <wsdl:message name="VT_CreateToken_GETSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_CreateToken_GETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GET_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GET_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POST_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POST_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GETSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GET" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GETSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GETResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_ManatronSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POST_Manatron" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_ManatronSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_POST_ManatronResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_ManatronSoapIn">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GET_Manatron" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_ManatronSoapOut">
+    <wsdl:part name="parameters" element="tns:VT_Transaction_GET_ManatronResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPaymentInformation" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPaymentInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:SendPaymentVerificationRequest" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:SendPaymentVerificationRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:test_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:test_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:calculatefee_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:calculatefee_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:calculatefee_nonNET_XMLObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:calculatefee_nonNET_XMLObjectResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:processTransaction_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:processTransaction_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:processTransaction_nonNET_XMLObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:processTransaction_nonNET_XMLObjectResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:processCredit_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:processCredit_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_Update_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_Update_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_FeeStructure_CreditCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:export_FeeStructure_CreditCards" />
+  </wsdl:message>
+  <wsdl:message name="export_FeeStructure_CreditCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:export_FeeStructure_CreditCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDebitAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDebitAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetDebitAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDebitAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDebitAccountHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDebitAccountHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetDebitAccountHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDebitAccountHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="calculateFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:calculateFee" />
+  </wsdl:message>
+  <wsdl:message name="calculateFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:calculateFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyPaymentID_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyPaymentID_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyTransaction_nonNET" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyTransaction_nonNETResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyTransaction" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_Update" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:export_DetailedTransactions_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_checkReturnsSoapIn">
+    <wsdl:part name="parameters" element="tns:export_checkReturns" />
+  </wsdl:message>
+  <wsdl:message name="export_checkReturnsSoapOut">
+    <wsdl:part name="parameters" element="tns:export_checkReturnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_creditCardCreditsSoapIn">
+    <wsdl:part name="parameters" element="tns:export_creditCardCredits" />
+  </wsdl:message>
+  <wsdl:message name="export_creditCardCreditsSoapOut">
+    <wsdl:part name="parameters" element="tns:export_creditCardCreditsResponse" />
+  </wsdl:message>
+  <wsdl:message name="export_checkCreditsSoapIn">
+    <wsdl:part name="parameters" element="tns:export_checkCredits" />
+  </wsdl:message>
+  <wsdl:message name="export_checkCreditsSoapOut">
+    <wsdl:part name="parameters" element="tns:export_checkCreditsResponse" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:verifyPaymentID" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:verifyPaymentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="processHarrisTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:processHarrisTransaction" />
+  </wsdl:message>
+  <wsdl:message name="processHarrisTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:processHarrisTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="processTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:processTransaction" />
+  </wsdl:message>
+  <wsdl:message name="processTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:processTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="processCreditSoapIn">
+    <wsdl:part name="parameters" element="tns:processCredit" />
+  </wsdl:message>
+  <wsdl:message name="processCreditSoapOut">
+    <wsdl:part name="parameters" element="tns:processCreditResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPaymentIDLookupSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPaymentIDLookup" />
+  </wsdl:message>
+  <wsdl:message name="insertPaymentIDLookupSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPaymentIDLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="deletePaymentIDLookupSoapIn">
+    <wsdl:part name="parameters" element="tns:deletePaymentIDLookup" />
+  </wsdl:message>
+  <wsdl:message name="deletePaymentIDLookupSoapOut">
+    <wsdl:part name="parameters" element="tns:deletePaymentIDLookupResponse" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITESoapIn">
+    <wsdl:part name="parameters" element="tns:process_CC_Credit_Vantiv_LITE" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITESoapOut">
+    <wsdl:part name="parameters" element="tns:process_CC_Credit_Vantiv_LITEResponse" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetSoapIn">
+    <wsdl:part name="parameters" element="tns:recurringTransaction_TokenCreation_nonNet" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetSoapOut">
+    <wsdl:part name="parameters" element="tns:recurringTransaction_TokenCreation_nonNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreationSoapIn">
+    <wsdl:part name="parameters" element="tns:recurringTransaction_TokenCreation" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreationSoapOut">
+    <wsdl:part name="parameters" element="tns:recurringTransaction_TokenCreationResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetSoapIn">
+    <wsdl:part name="parameters" element="tns:updateToken_nonNet" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetSoapOut">
+    <wsdl:part name="parameters" element="tns:updateToken_nonNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:updateToken" />
+  </wsdl:message>
+  <wsdl:message name="updateTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:updateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetSoapIn">
+    <wsdl:part name="parameters" element="tns:processRecurringTransaction_ByToken_nonNet" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetSoapOut">
+    <wsdl:part name="parameters" element="tns:processRecurringTransaction_ByToken_nonNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:processRecurringTransaction_ByToken" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:processRecurringTransaction_ByTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETHttpGetIn">
+    <wsdl:part name="strXML_GET" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETHttpGetIn">
+    <wsdl:part name="strXML_POST" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationHttpGetIn">
+    <wsdl:part name="xmlPost" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestHttpGetIn">
+    <wsdl:part name="xmlPost" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETHttpGetIn">
+    <wsdl:part name="strTEST" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETHttpGetIn">
+    <wsdl:part name="strXML_Fee" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseHttpGetIn">
+    <wsdl:part name="strXML_Fee" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETHttpGetIn">
+    <wsdl:part name="strXML_Transaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseHttpGetIn">
+    <wsdl:part name="strXML_Transaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETHttpGetIn">
+    <wsdl:part name="strXML_Credit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETHttpGetIn">
+    <wsdl:part name="strXML_ExportRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETHttpGetIn">
+    <wsdl:part name="strXML_ExportRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETHttpGetIn">
+    <wsdl:part name="strXML_VerifyRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETHttpGetIn">
+    <wsdl:part name="strXML_VerifyRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITEHttpGetIn">
+    <wsdl:part name="strClientKey" type="s:string" />
+    <wsdl:part name="dblAmountToBeCredited" type="s:string" />
+    <wsdl:part name="strTransactionID" type="s:string" />
+    <wsdl:part name="intCollectionMode" type="s:string" />
+    <wsdl:part name="intVoidCredit" type="s:string" />
+    <wsdl:part name="intCardType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITEHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetHttpGetIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetHttpGetIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetHttpGetIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETHttpPostIn">
+    <wsdl:part name="strXML_GET" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_GET_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETHttpPostIn">
+    <wsdl:part name="strXML_POST" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VT_Transaction_POST_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationHttpPostIn">
+    <wsdl:part name="xmlPost" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentInformationHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestHttpPostIn">
+    <wsdl:part name="xmlPost" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendPaymentVerificationRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETHttpPostIn">
+    <wsdl:part name="strTEST" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="test_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETHttpPostIn">
+    <wsdl:part name="strXML_Fee" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseHttpPostIn">
+    <wsdl:part name="strXML_Fee" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="calculatefee_nonNET_XMLObjectResponseHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETHttpPostIn">
+    <wsdl:part name="strXML_Transaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseHttpPostIn">
+    <wsdl:part name="strXML_Transaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processTransaction_nonNET_XMLObjectResponseHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETHttpPostIn">
+    <wsdl:part name="strXML_Credit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processCredit_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETHttpPostIn">
+    <wsdl:part name="strXML_ExportRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETHttpPostIn">
+    <wsdl:part name="strXML_ExportRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="export_DetailedTransactions_Update_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETHttpPostIn">
+    <wsdl:part name="strXML_VerifyRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyPaymentID_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETHttpPostIn">
+    <wsdl:part name="strXML_VerifyRequest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="verifyTransaction_nonNETHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITEHttpPostIn">
+    <wsdl:part name="strClientKey" type="s:string" />
+    <wsdl:part name="dblAmountToBeCredited" type="s:string" />
+    <wsdl:part name="strTransactionID" type="s:string" />
+    <wsdl:part name="intCollectionMode" type="s:string" />
+    <wsdl:part name="intVoidCredit" type="s:string" />
+    <wsdl:part name="intCardType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="process_CC_Credit_Vantiv_LITEHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetHttpPostIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="recurringTransaction_TokenCreation_nonNetHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetHttpPostIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="updateToken_nonNetHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetHttpPostIn">
+    <wsdl:part name="strTransaction" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="processRecurringTransaction_ByToken_nonNetHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ProcessingGatewaySoap">
+    <wsdl:operation name="VT_Transaction_POST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_POST method allows CSI clients to securely post transactional data that is to be used in a subsequent virtual terminal transaction request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_POSTSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_POSTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_POST">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_CreateToken_POST method allows CSI clients to securely post token data that is to be used in a subsequent virtual terminal token request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_CreateToken_POSTSoapIn" />
+      <wsdl:output message="tns:VT_CreateToken_POSTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_GET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_CreateToken_GET method allows CSI clients to securely retrieve token data that is the result of a previous virtual terminal create token request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_CreateToken_GETSoapIn" />
+      <wsdl:output message="tns:VT_CreateToken_GETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_GET_nonNET method allows CSI clients to securely retrieve transactional data that is the result of a previous virtual terminal transaction request.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_GET_nonNETSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_GET_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_POST method allows CSI clients to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_POST_nonNETSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_POST_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_GET method allows CSI clients to securely retrieve transactional data that is the result of a previous virtual terminal transaction request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_GETSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_GETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_Manatron">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_POST_Manatron method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely post transactional data that is to be used in a subsequent virtual terminal transaction request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_POST_ManatronSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_POST_ManatronSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_Manatron">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_GET_Mantron method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely retrieve transactional data that is the result of a previous virtual terminal transaction request.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_GET_ManatronSoapIn" />
+      <wsdl:output message="tns:VT_Transaction_GET_ManatronSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentInformation method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentInformationSoapIn" />
+      <wsdl:output message="tns:SendPaymentInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentVerificationRequest method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely retrieve transactional data that is the result of a previous virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentVerificationRequestSoapIn" />
+      <wsdl:output message="tns:SendPaymentVerificationRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentCategories">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetPaymentCategories</wsdl:documentation>
+      <wsdl:input message="tns:GetPaymentCategoriesSoapIn" />
+      <wsdl:output message="tns:GetPaymentCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">GetPaymentTypes</wsdl:documentation>
+      <wsdl:input message="tns:GetPaymentTypesSoapIn" />
+      <wsdl:output message="tns:GetPaymentTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The test_nonNET method accepts a simple string of less than 32 characters (any extra characters will simply be truncated) as an argument and returns the same string in reverse order... the method is provided for developers to utilize in order to quickly develop a simple proof of concept demonstrating SOAP connectivity and interaction with the CSI eCollections Portal.</wsdl:documentation>
+      <wsdl:input message="tns:test_nonNETSoapIn" />
+      <wsdl:output message="tns:test_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNETSoapIn" />
+      <wsdl:output message="tns:calculatefee_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET_XMLObjectResponse method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNET_XMLObjectResponseSoapIn" />
+      <wsdl:output message="tns:calculatefee_nonNET_XMLObjectResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNETSoapIn" />
+      <wsdl:output message="tns:processTransaction_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET_XMLObjectResponse method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNET_XMLObjectResponseSoapIn" />
+      <wsdl:output message="tns:processTransaction_nonNET_XMLObjectResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processCredit_nonNET method provides a gateway through which CSI clients may process credits for erroneously processed electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processCredit_nonNETSoapIn" />
+      <wsdl:output message="tns:processCredit_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_nonNETSoapIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_Update_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems that has not been provided in a previous update request (any transactions returned via this request will be flagged as updated and, subsequently, not be returned in future requests).... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_Update_nonNETSoapIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_Update_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_FeeStructure_CreditCards">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_FeeStructure_CreditCards method provides a gateway through which CSI clients may request the CSI credit card fee rates for local caching... this method is provided for those developers who do not wish to use the calculatedFee method during real-time calls.</wsdl:documentation>
+      <wsdl:input message="tns:export_FeeStructure_CreditCardsSoapIn" />
+      <wsdl:output message="tns:export_FeeStructure_CreditCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The GetDebitAccount method returns the record assoicated with the Client and Payment ID.</wsdl:documentation>
+      <wsdl:input message="tns:GetDebitAccountSoapIn" />
+      <wsdl:output message="tns:GetDebitAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccountHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The GetDebitAccountHistory method returns all transaction history records assoicated with the Client and Payment ID.</wsdl:documentation>
+      <wsdl:input message="tns:GetDebitAccountHistorySoapIn" />
+      <wsdl:output message="tns:GetDebitAccountHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculateFee">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee method calculates and returns the fee that CSI will apply to a particular transaction.</wsdl:documentation>
+      <wsdl:input message="tns:calculateFeeSoapIn" />
+      <wsdl:output message="tns:calculateFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactionsSoapIn" />
+      <wsdl:output message="tns:export_DetailedTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyPaymentID method provides a gateway through which CSI clients may verify locally (CSI) persisted payment ids.  For this method to be effective the client must have established a method by which those payment ids are communicated to CSI for local persistence.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyPaymentID_nonNETSoapIn" />
+      <wsdl:output message="tns:verifyPaymentID_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyTransaction_nonNET method provides a gateway through which CSI clients may verify that a transaction request processed successfully... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyTransaction_nonNETSoapIn" />
+      <wsdl:output message="tns:verifyTransaction_nonNETSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyTransaction method provides a gateway through which CSI clients may verify that a transaction request processed successfully.</wsdl:documentation>
+      <wsdl:input message="tns:verifyTransactionSoapIn" />
+      <wsdl:output message="tns:verifyTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_Update method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems that has not been provided in a previous update request (any transactions returned via this request will be flagged as updated and, subsequently, not be returned in future requests).</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_UpdateSoapIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_checkReturns">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_checkReturns method provides a gateway through which CSI clients may request check return history for updating their backend MIS and/or CIS systems.</wsdl:documentation>
+      <wsdl:input message="tns:export_checkReturnsSoapIn" />
+      <wsdl:output message="tns:export_checkReturnsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_creditCardCredits">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_creditCardCredits method provides a gateway through which CSI clients may request credit card credit history for updating their backend MIS and/or CIS systems.</wsdl:documentation>
+      <wsdl:input message="tns:export_creditCardCreditsSoapIn" />
+      <wsdl:output message="tns:export_creditCardCreditsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_checkCredits">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_checkCredits method provides a gateway through which CSI clients may request check credit history for updating their backend MIS and/or CIS systems.</wsdl:documentation>
+      <wsdl:input message="tns:export_checkCreditsSoapIn" />
+      <wsdl:output message="tns:export_checkCreditsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyPaymentID method provides a gateway through which CSI clients may verify locally (CSI) persisted payment ids.  For this method to be effective the client must have established a method by which those payment ids are communicated to CSI for local persistence.</wsdl:documentation>
+      <wsdl:input message="tns:verifyPaymentIDSoapIn" />
+      <wsdl:output message="tns:verifyPaymentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processHarrisTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processHarrisTransaction method provides a gateway through which CSI clients may process electronic check and credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:processHarrisTransactionSoapIn" />
+      <wsdl:output message="tns:processHarrisTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction method provides a gateway through which CSI clients may process electronic check and credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:processTransactionSoapIn" />
+      <wsdl:output message="tns:processTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processCredit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processCredit method provides a gateway through which CSI clients may process credits for erroneously processed electronic check and credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:processCreditSoapIn" />
+      <wsdl:output message="tns:processCreditSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPaymentIDLookup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The insertPaymentIDLookup method provides a gateway through which CSI clients may insert PaymentIds, Amount Due, Customer Descriptors, Payment Type IDs, and up to 15 Miscellaneous values.</wsdl:documentation>
+      <wsdl:input message="tns:insertPaymentIDLookupSoapIn" />
+      <wsdl:output message="tns:insertPaymentIDLookupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePaymentIDLookup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The deletePaymentIDLookup method provides a gateway through which CSI clients may delete by PaymentTypeId, PaymentId_Primary or delete all records by not passing in either of these values.</wsdl:documentation>
+      <wsdl:input message="tns:deletePaymentIDLookupSoapIn" />
+      <wsdl:output message="tns:deletePaymentIDLookupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The process_CC_Credit_Vantiv_LITE method provides a gateway through which CSI Representatives may immediate and direct voids and/or credits.</wsdl:documentation>
+      <wsdl:input message="tns:process_CC_Credit_Vantiv_LITESoapIn" />
+      <wsdl:output message="tns:process_CC_Credit_Vantiv_LITESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The recurringTransaction_TokenCreation_nonNet method provides a gateway through which CSI clients may create a tokenized credit card record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:recurringTransaction_TokenCreation_nonNetSoapIn" />
+      <wsdl:output message="tns:recurringTransaction_TokenCreation_nonNetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The recurringTransaction_TokenCreation method provides a gateway through which CSI clients may create a tokenized credit card record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:recurringTransaction_TokenCreationSoapIn" />
+      <wsdl:output message="tns:recurringTransaction_TokenCreationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The updateToken method provides a gateway through which CSI clients may update a tokenized credit card or eCheck record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:updateToken_nonNetSoapIn" />
+      <wsdl:output message="tns:updateToken_nonNetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The updateToken method provides a gateway through which CSI clients may update a tokenized credit card or eCheck record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:updateTokenSoapIn" />
+      <wsdl:output message="tns:updateTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processRecurringTransaction_ByToken method provides a gateway through which CSI clients may process electronic credit card transactions utilizing a previously established credit card token value in place of actual credit card information.</wsdl:documentation>
+      <wsdl:input message="tns:processRecurringTransaction_ByToken_nonNetSoapIn" />
+      <wsdl:output message="tns:processRecurringTransaction_ByToken_nonNetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processRecurringTransaction_ByToken method provides a gateway through which CSI clients may process electronic credit card transactions utilizing a previously established credit card token value in place of actual credit card information.</wsdl:documentation>
+      <wsdl:input message="tns:processRecurringTransaction_ByTokenSoapIn" />
+      <wsdl:output message="tns:processRecurringTransaction_ByTokenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProcessingGatewayHttpGet">
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_GET_nonNET method allows CSI clients to securely retrieve transactional data that is the result of a previous virtual terminal transaction request.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_GET_nonNETHttpGetIn" />
+      <wsdl:output message="tns:VT_Transaction_GET_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_POST method allows CSI clients to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_POST_nonNETHttpGetIn" />
+      <wsdl:output message="tns:VT_Transaction_POST_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentInformation method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentInformationHttpGetIn" />
+      <wsdl:output message="tns:SendPaymentInformationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentVerificationRequest method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely retrieve transactional data that is the result of a previous virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentVerificationRequestHttpGetIn" />
+      <wsdl:output message="tns:SendPaymentVerificationRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The test_nonNET method accepts a simple string of less than 32 characters (any extra characters will simply be truncated) as an argument and returns the same string in reverse order... the method is provided for developers to utilize in order to quickly develop a simple proof of concept demonstrating SOAP connectivity and interaction with the CSI eCollections Portal.</wsdl:documentation>
+      <wsdl:input message="tns:test_nonNETHttpGetIn" />
+      <wsdl:output message="tns:test_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNETHttpGetIn" />
+      <wsdl:output message="tns:calculatefee_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET_XMLObjectResponse method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNET_XMLObjectResponseHttpGetIn" />
+      <wsdl:output message="tns:calculatefee_nonNET_XMLObjectResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNETHttpGetIn" />
+      <wsdl:output message="tns:processTransaction_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET_XMLObjectResponse method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNET_XMLObjectResponseHttpGetIn" />
+      <wsdl:output message="tns:processTransaction_nonNET_XMLObjectResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processCredit_nonNET method provides a gateway through which CSI clients may process credits for erroneously processed electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processCredit_nonNETHttpGetIn" />
+      <wsdl:output message="tns:processCredit_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_nonNETHttpGetIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_Update_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems that has not been provided in a previous update request (any transactions returned via this request will be flagged as updated and, subsequently, not be returned in future requests).... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_Update_nonNETHttpGetIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_Update_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyPaymentID method provides a gateway through which CSI clients may verify locally (CSI) persisted payment ids.  For this method to be effective the client must have established a method by which those payment ids are communicated to CSI for local persistence.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyPaymentID_nonNETHttpGetIn" />
+      <wsdl:output message="tns:verifyPaymentID_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyTransaction_nonNET method provides a gateway through which CSI clients may verify that a transaction request processed successfully... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyTransaction_nonNETHttpGetIn" />
+      <wsdl:output message="tns:verifyTransaction_nonNETHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The process_CC_Credit_Vantiv_LITE method provides a gateway through which CSI Representatives may immediate and direct voids and/or credits.</wsdl:documentation>
+      <wsdl:input message="tns:process_CC_Credit_Vantiv_LITEHttpGetIn" />
+      <wsdl:output message="tns:process_CC_Credit_Vantiv_LITEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The recurringTransaction_TokenCreation_nonNet method provides a gateway through which CSI clients may create a tokenized credit card record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:recurringTransaction_TokenCreation_nonNetHttpGetIn" />
+      <wsdl:output message="tns:recurringTransaction_TokenCreation_nonNetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The updateToken method provides a gateway through which CSI clients may update a tokenized credit card or eCheck record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:updateToken_nonNetHttpGetIn" />
+      <wsdl:output message="tns:updateToken_nonNetHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processRecurringTransaction_ByToken method provides a gateway through which CSI clients may process electronic credit card transactions utilizing a previously established credit card token value in place of actual credit card information.</wsdl:documentation>
+      <wsdl:input message="tns:processRecurringTransaction_ByToken_nonNetHttpGetIn" />
+      <wsdl:output message="tns:processRecurringTransaction_ByToken_nonNetHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ProcessingGatewayHttpPost">
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_GET_nonNET method allows CSI clients to securely retrieve transactional data that is the result of a previous virtual terminal transaction request.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_GET_nonNETHttpPostIn" />
+      <wsdl:output message="tns:VT_Transaction_GET_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The VT_Transaction_POST method allows CSI clients to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:VT_Transaction_POST_nonNETHttpPostIn" />
+      <wsdl:output message="tns:VT_Transaction_POST_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentInformation method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely post transactional data that is to be used in a subsequent virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentInformationHttpPostIn" />
+      <wsdl:output message="tns:SendPaymentInformationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The SendPaymentVerificationRequest method allows CSI clients utilizing the Manatron MVP Tax Manager application to securely retrieve transactional data that is the result of a previous virtual terminal transaction request... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:SendPaymentVerificationRequestHttpPostIn" />
+      <wsdl:output message="tns:SendPaymentVerificationRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The test_nonNET method accepts a simple string of less than 32 characters (any extra characters will simply be truncated) as an argument and returns the same string in reverse order... the method is provided for developers to utilize in order to quickly develop a simple proof of concept demonstrating SOAP connectivity and interaction with the CSI eCollections Portal.</wsdl:documentation>
+      <wsdl:input message="tns:test_nonNETHttpPostIn" />
+      <wsdl:output message="tns:test_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNETHttpPostIn" />
+      <wsdl:output message="tns:calculatefee_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The calculateFee_nonNET_XMLObjectResponse method calculates and returns the fee that CSI will apply to a particular transaction... the method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:calculatefee_nonNET_XMLObjectResponseHttpPostIn" />
+      <wsdl:output message="tns:calculatefee_nonNET_XMLObjectResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNETHttpPostIn" />
+      <wsdl:output message="tns:processTransaction_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processTransaction_nonNET_XMLObjectResponse method provides a gateway through which CSI clients may process electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who wish to pass in an XML argument as a string, but, wish to have the response return as an System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processTransaction_nonNET_XMLObjectResponseHttpPostIn" />
+      <wsdl:output message="tns:processTransaction_nonNET_XMLObjectResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processCredit_nonNET method provides a gateway through which CSI clients may process credits for erroneously processed electronic check and credit card transactions... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:processCredit_nonNETHttpPostIn" />
+      <wsdl:output message="tns:processCredit_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_nonNETHttpPostIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The export_DetailedTransactions_Update_nonNET method provides a gateway through which CSI clients may request detailed transaction history for updating their backend MIS and/or CIS systems that has not been provided in a previous update request (any transactions returned via this request will be flagged as updated and, subsequently, not be returned in future requests).... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:export_DetailedTransactions_Update_nonNETHttpPostIn" />
+      <wsdl:output message="tns:export_DetailedTransactions_Update_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyPaymentID method provides a gateway through which CSI clients may verify locally (CSI) persisted payment ids.  For this method to be effective the client must have established a method by which those payment ids are communicated to CSI for local persistence.... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyPaymentID_nonNETHttpPostIn" />
+      <wsdl:output message="tns:verifyPaymentID_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The verifyTransaction_nonNET method provides a gateway through which CSI clients may verify that a transaction request processed successfully... this method is provided for those developers who are not using .NET and/or who are not familiar with the System.xml.XMLDocument object.</wsdl:documentation>
+      <wsdl:input message="tns:verifyTransaction_nonNETHttpPostIn" />
+      <wsdl:output message="tns:verifyTransaction_nonNETHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The process_CC_Credit_Vantiv_LITE method provides a gateway through which CSI Representatives may immediate and direct voids and/or credits.</wsdl:documentation>
+      <wsdl:input message="tns:process_CC_Credit_Vantiv_LITEHttpPostIn" />
+      <wsdl:output message="tns:process_CC_Credit_Vantiv_LITEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The recurringTransaction_TokenCreation_nonNet method provides a gateway through which CSI clients may create a tokenized credit card record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:recurringTransaction_TokenCreation_nonNetHttpPostIn" />
+      <wsdl:output message="tns:recurringTransaction_TokenCreation_nonNetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The updateToken method provides a gateway through which CSI clients may update a tokenized credit card or eCheck record to be used for processing recurring credit card transactions.</wsdl:documentation>
+      <wsdl:input message="tns:updateToken_nonNetHttpPostIn" />
+      <wsdl:output message="tns:updateToken_nonNetHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The processRecurringTransaction_ByToken method provides a gateway through which CSI clients may process electronic credit card transactions utilizing a previously established credit card token value in place of actual credit card information.</wsdl:documentation>
+      <wsdl:input message="tns:processRecurringTransaction_ByToken_nonNetHttpPostIn" />
+      <wsdl:output message="tns:processRecurringTransaction_ByToken_nonNetHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProcessingGatewaySoap" type="tns:ProcessingGatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VT_Transaction_POST">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_POST">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_CreateToken_POST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_GET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_CreateToken_GET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_Manatron">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST_Manatron" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_Manatron">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET_Manatron" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/SendPaymentInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/SendPaymentVerificationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentCategories">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetPaymentCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTypes">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetPaymentTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/test_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculatefee_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculatefee_nonNET_XMLObjectResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction_nonNET_XMLObjectResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processCredit_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_Update_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_FeeStructure_CreditCards">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_FeeStructure_CreditCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccount">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetDebitAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccountHistory">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetDebitAccountHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculateFee">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculateFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyPaymentID_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyTransaction_nonNET" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_checkReturns">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_checkReturns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_creditCardCredits">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_creditCardCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_checkCredits">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_checkCredits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyPaymentID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processHarrisTransaction">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processHarrisTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processCredit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPaymentIDLookup">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/insertPaymentIDLookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePaymentIDLookup">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/deletePaymentIDLookup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/process_CC_Credit_Vantiv_LITE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/recurringTransaction_TokenCreation_nonNet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/recurringTransaction_TokenCreation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/updateToken_nonNet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/updateToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processRecurringTransaction_ByToken_nonNet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken">
+      <soap:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processRecurringTransaction_ByToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessingGatewaySoap12" type="tns:ProcessingGatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VT_Transaction_POST">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_POST">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_CreateToken_POST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_CreateToken_GET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_CreateToken_GET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_Manatron">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_POST_Manatron" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_GET_Manatron">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/VT_Transaction_GET_Manatron" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/SendPaymentInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/SendPaymentVerificationRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentCategories">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetPaymentCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentTypes">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetPaymentTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/test_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculatefee_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculatefee_nonNET_XMLObjectResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction_nonNET_XMLObjectResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processCredit_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_Update_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_FeeStructure_CreditCards">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_FeeStructure_CreditCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccount">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetDebitAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDebitAccountHistory">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/GetDebitAccountHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculateFee">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/calculateFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyPaymentID_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyTransaction_nonNET" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_DetailedTransactions_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_checkReturns">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_checkReturns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_creditCardCredits">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_creditCardCredits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_checkCredits">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/export_checkCredits" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/verifyPaymentID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processHarrisTransaction">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processHarrisTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processCredit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPaymentIDLookup">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/insertPaymentIDLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePaymentIDLookup">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/deletePaymentIDLookup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/process_CC_Credit_Vantiv_LITE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/recurringTransaction_TokenCreation_nonNet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/recurringTransaction_TokenCreation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/updateToken_nonNet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/updateToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processRecurringTransaction_ByToken_nonNet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken">
+      <soap12:operation soapAction="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway/processRecurringTransaction_ByToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessingGatewayHttpGet" type="tns:ProcessingGatewayHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <http:operation location="/VT_Transaction_GET_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <http:operation location="/VT_Transaction_POST_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <http:operation location="/SendPaymentInformation" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <http:operation location="/SendPaymentVerificationRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <http:operation location="/test_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <http:operation location="/calculatefee_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <http:operation location="/calculatefee_nonNET_XMLObjectResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <http:operation location="/processTransaction_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <http:operation location="/processTransaction_nonNET_XMLObjectResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <http:operation location="/processCredit_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <http:operation location="/export_DetailedTransactions_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <http:operation location="/export_DetailedTransactions_Update_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <http:operation location="/verifyPaymentID_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <http:operation location="/verifyTransaction_nonNET" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <http:operation location="/process_CC_Credit_Vantiv_LITE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <http:operation location="/recurringTransaction_TokenCreation_nonNet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <http:operation location="/updateToken_nonNet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <http:operation location="/processRecurringTransaction_ByToken_nonNet" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProcessingGatewayHttpPost" type="tns:ProcessingGatewayHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="VT_Transaction_GET_nonNET">
+      <http:operation location="/VT_Transaction_GET_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VT_Transaction_POST_nonNET">
+      <http:operation location="/VT_Transaction_POST_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentInformation">
+      <http:operation location="/SendPaymentInformation" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendPaymentVerificationRequest">
+      <http:operation location="/SendPaymentVerificationRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test_nonNET">
+      <http:operation location="/test_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET">
+      <http:operation location="/calculatefee_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calculatefee_nonNET_XMLObjectResponse">
+      <http:operation location="/calculatefee_nonNET_XMLObjectResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET">
+      <http:operation location="/processTransaction_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processTransaction_nonNET_XMLObjectResponse">
+      <http:operation location="/processTransaction_nonNET_XMLObjectResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processCredit_nonNET">
+      <http:operation location="/processCredit_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_nonNET">
+      <http:operation location="/export_DetailedTransactions_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="export_DetailedTransactions_Update_nonNET">
+      <http:operation location="/export_DetailedTransactions_Update_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyPaymentID_nonNET">
+      <http:operation location="/verifyPaymentID_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verifyTransaction_nonNET">
+      <http:operation location="/verifyTransaction_nonNET" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="process_CC_Credit_Vantiv_LITE">
+      <http:operation location="/process_CC_Credit_Vantiv_LITE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recurringTransaction_TokenCreation_nonNet">
+      <http:operation location="/recurringTransaction_TokenCreation_nonNet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateToken_nonNet">
+      <http:operation location="/updateToken_nonNet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="processRecurringTransaction_ByToken_nonNet">
+      <http:operation location="/processRecurringTransaction_ByToken_nonNet" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProcessingGateway">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">The CSI ProcessingGateway webservice provides our clients with multiple utilities that facilitate the real-time processing and management of internet based credit card and echeck transactions.This service is intended for the use of current CSI clients ONLY. Any unauthorized use is strictly prohibited.</wsdl:documentation>
+    <wsdl:port name="ProcessingGatewaySoap" binding="tns:ProcessingGatewaySoap">
+      <soap:address location="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProcessingGatewaySoap12" binding="tns:ProcessingGatewaySoap12">
+      <soap12:address location="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProcessingGatewayHttpGet" binding="tns:ProcessingGatewayHttpGet">
+      <http:address location="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProcessingGatewayHttpPost" binding="tns:ProcessingGatewayHttpPost">
+      <http:address location="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

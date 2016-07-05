@@ -18,28 +18,28 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CLIENTKEY, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CLIENTKEY, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CLIENTKEY, new { htmlAttributes = new { @class = "form-control", @Value = "9873rfrf5673mjkmnhyu675tr498iu78" } })
                 @Html.ValidationMessageFor(model => model.CLIENTKEY, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.PAYMENTMETHOD, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PAYMENTMETHOD, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.PAYMENTMETHOD, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
                 @Html.ValidationMessageFor(model => model.PAYMENTMETHOD, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.CARDTYPE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CARDTYPE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.CARDTYPE, new { htmlAttributes = new { @class = "form-control", @Value = "4" } })
                 @Html.ValidationMessageFor(model => model.CARDTYPE, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.COLLECTIONMODE, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.COLLECTIONMODE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.COLLECTIONMODE, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
                 @Html.ValidationMessageFor(model => model.COLLECTIONMODE, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -53,7 +53,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
                 @Html.ValidationMessageFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, "", new { @class = "text-danger" })
             </div>
         </div>

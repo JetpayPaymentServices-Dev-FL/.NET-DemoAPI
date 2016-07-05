@@ -5,15 +5,55 @@ using System.Web;
 using System.Web.Mvc;
 using SOAP_dontDropIt.Models;
 using System.Xml;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace SOAP_dontDropIt.Controllers
 {
     public class CalculateFeeController : Controller
     {
         // GET: CalculateFee
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
+        }
+
+        // POST: CalculateFee/Create
+        [HttpPost]
+        public ActionResult Index(CalculateFeeModels.FEE collection)
+        {
+            try
+            {
+                //TODO: check first to see if accountId exists. If so they have account already enrolled, offer an edit screen//
+                //
+                //dev-web reference//www-dev/magic-services//
+                com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
+                //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
+                XmlDocument xmlRequest = new XmlDocument();
+                XmlDocument xmlResponse = new XmlDocument();
+                var xml = String.Empty;
+                XmlSerializer xsSubmit = new XmlSerializer(typeof(CalculateFeeModels.FEE));
+                var subReq = new CalculateFeeModels.FEE();
+                using (StringWriter sww = new StringWriter())
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xsSubmit.Serialize(writer, collection);
+                    xml = sww.ToString(); // Your XML
+                }
+                
+                //string xml = collection.ToString();
+                xmlRequest.LoadXml(xml);
+                xmlResponse.LoadXml(ws.calculateFee(xmlRequest).OuterXml);
+                string responseCode = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE").InnerText;
+                string fee = xmlResponse.DocumentElement.SelectSingleNode("FEEAMOUNT").InnerText;
+                ViewData["feeAmount"] = fee;
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         // GET: CalculateFee/Details/5
@@ -38,10 +78,10 @@ namespace SOAP_dontDropIt.Controllers
             try
             {
                 //TODO: check first to see if accountId exists. If so they have account already enrolled, offer an edit screen//
-                //await DocumentDBRepository<CustomerInfo>.CreateCustomerDocumentsAsync(Repository.GetCustomerInfo());
-                //dev-web reference//www-dev/magic-services/
-                //com.collectorsolutions.magic.ProcessingGateway ws = new com.collectorsolutions.magic.ProcessingGateway(); //The web service
-                //Vero test client key//CIID 53dd564b
+                //
+                //dev-web reference//www-dev/magic-services//
+                com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
+                //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
                 XmlDocument xmlRequest = new XmlDocument();
                 XmlDocument xmlResponse = new XmlDocument();
                 string xml = collection.ToString();

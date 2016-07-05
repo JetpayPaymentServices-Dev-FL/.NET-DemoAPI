@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx?disco" filename="ProcessingGateway.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx?wsdl" filename="ProcessingGateway.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>
