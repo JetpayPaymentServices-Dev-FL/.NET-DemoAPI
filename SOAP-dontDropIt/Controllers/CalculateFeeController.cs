@@ -16,6 +16,7 @@ namespace SOAP_dontDropIt.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            //var model = TempData["feeAmount"];
             return View();
         }
 
@@ -47,7 +48,10 @@ namespace SOAP_dontDropIt.Controllers
                 xmlResponse.LoadXml(ws.calculateFee(xmlRequest).OuterXml);
                 string responseCode = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE").InnerText;
                 string fee = xmlResponse.DocumentElement.SelectSingleNode("FEEAMOUNT").InnerText;
-                ViewData["feeAmount"] = fee;
+                CalculateFeeResponseModels.FEE calFee = new CalculateFeeResponseModels.FEE();
+                calFee.FEEAMOUNT = xmlResponse.DocumentElement.SelectSingleNode("FEEAMOUNT").InnerText;
+                calFee.RESPONSECODE = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE");
+                TempData["feeAmount"] = calFee.FEEAMOUNT;
                 return RedirectToAction("Index");
             }
             catch
