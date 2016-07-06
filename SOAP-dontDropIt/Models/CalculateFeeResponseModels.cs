@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SOAP_dontDropIt.Models
 {
-    class CalculateFeeResponseModels
+    [Serializable()]
+    public class CalculateFeeResponseModels
     {
 
         /// <remarks/>
@@ -19,7 +20,6 @@ namespace SOAP_dontDropIt.Models
 
             private object rESPONSECODEField;
 
-            /// <remarks/>
             public object FEEAMOUNT
             {
                 get
@@ -32,7 +32,6 @@ namespace SOAP_dontDropIt.Models
                 }
             }
 
-            /// <remarks/>
             public object RESPONSECODE
             {
                 get

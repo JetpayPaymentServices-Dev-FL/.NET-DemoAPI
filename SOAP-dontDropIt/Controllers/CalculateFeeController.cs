@@ -14,7 +14,7 @@ namespace SOAP_dontDropIt.Controllers
     {
         // GET: CalculateFee
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult CalculateFee()
         {
             //var model = TempData["feeAmount"];
             return View();
@@ -22,7 +22,7 @@ namespace SOAP_dontDropIt.Controllers
 
         // POST: CalculateFee/Create
         [HttpPost]
-        public ActionResult Index(CalculateFeeModels.FEE collection)
+        public ActionResult CalculateFee(CalculateFeeModels.FEE collection)
         {
             try
             {
