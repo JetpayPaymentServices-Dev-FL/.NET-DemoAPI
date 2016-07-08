@@ -9,142 +9,30 @@ namespace SOAP_dontDropIt.Models
 {
     public class CalculateFeeModels
     {
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-        [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-        public partial class FEE
+        [XmlRoot(ElementName = "LINEITEM")]
+        public class LINEITEM
         {
-
-            private string cLIENTKEYField;
-
-            private byte pAYMENTMETHODField;
-
-            private byte cARDTYPEField;
-
-            private byte cOLLECTIONMODEField;
-
-            private decimal aMOUNTField;
-
-            private FEELINEITEM lINEITEMField;
-
-            /// <remarks/>
-            public string CLIENTKEY
-            {
-                get
-                {
-                    return this.cLIENTKEYField;
-                }
-                set
-                {
-                    this.cLIENTKEYField = value;
-                }
-            }
-
-            /// <remarks/>
-            public byte PAYMENTMETHOD
-            {
-                get
-                {
-                    return this.pAYMENTMETHODField;
-                }
-                set
-                {
-                    this.pAYMENTMETHODField = value;
-                }
-            }
-
-            /// <remarks/>
-            public byte CARDTYPE
-            {
-                get
-                {
-                    return this.cARDTYPEField;
-                }
-                set
-                {
-                    this.cARDTYPEField = value;
-                }
-            }
-
-            /// <remarks/>
-            public byte COLLECTIONMODE
-            {
-                get
-                {
-                    return this.cOLLECTIONMODEField;
-                }
-                set
-                {
-                    this.cOLLECTIONMODEField = value;
-                }
-            }
-
-            /// <remarks/>
-            public decimal AMOUNT
-            {
-                get
-                {
-                    return this.aMOUNTField;
-                }
-                set
-                {
-                    this.aMOUNTField = value;
-                }
-            }
-
-            /// <remarks/>
-            public FEELINEITEM LINEITEM
-            {
-                get
-                {
-                    return this.lINEITEMField;
-                }
-                set
-                {
-                    this.lINEITEMField = value;
-                }
-            }
+            [XmlElement(ElementName = "CUSTOMERPAYMENTTYPEID")]
+            public string CUSTOMERPAYMENTTYPEID { get; set; }
+            [XmlElement(ElementName = "ITEMAMOUNT")]
+            public string ITEMAMOUNT { get; set; }
         }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-        public partial class FEELINEITEM
+        [XmlRoot(ElementName = "FEE")]
+        public class FEE
         {
-
-            private string cUSTOMERPAYMENTTYPEIDField;
-
-            private decimal iTEMAMOUNTField;
-
-            /// <remarks/>
-            [Display(Name = "API Payment Name")]
-            public string CUSTOMERPAYMENTTYPEID
-            {
-                get
-                {
-                    return this.cUSTOMERPAYMENTTYPEIDField;
-                }
-                set
-                {
-                    this.cUSTOMERPAYMENTTYPEIDField = value;
-                }
-            }
-
-            /// <remarks/>
-            public decimal ITEMAMOUNT
-            {
-                get
-                {
-                    return this.iTEMAMOUNTField;
-                }
-                set
-                {
-                    this.iTEMAMOUNTField = value;
-                }
-            }
+            [XmlElement(ElementName = "CLIENTKEY")]
+            public string CLIENTKEY { get; set; }
+            [XmlElement(ElementName = "PAYMENTMETHOD")]
+            public string PAYMENTMETHOD { get; set; }
+            [XmlElement(ElementName = "CARDTYPE")]
+            public string CARDTYPE { get; set; }
+            [XmlElement(ElementName = "COLLECTIONMODE")]
+            public string COLLECTIONMODE { get; set; }
+            [XmlElement(ElementName = "AMOUNT")]
+            public string AMOUNT { get; set; }
+            [XmlElement(ElementName = "LINEITEM")]
+            public LINEITEM LINEITEM { get; set; }
         }
-
-
-
     }
 }

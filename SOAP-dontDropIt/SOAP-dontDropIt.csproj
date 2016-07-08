@@ -164,7 +164,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LegacyAPIController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\VirtualTerminalTransactionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,6 +217,7 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\LegacyAPI\CalculateFee.cshtml" />
+    <Content Include="Views\LegacyAPI\VirtualTerminalTransaction.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -50,7 +50,7 @@ namespace SOAP_dontDropIt.Controllers
                 string fee = xmlResponse.DocumentElement.SelectSingleNode("FEEAMOUNT").InnerText;
                 CalculateFeeResponseModels.FEE calFee = new CalculateFeeResponseModels.FEE();
                 calFee.FEEAMOUNT = xmlResponse.DocumentElement.SelectSingleNode("FEEAMOUNT").InnerText;
-                calFee.RESPONSECODE = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE");
+                //calFee.RESPONSECODE = xmlResponse.DocumentElement.SelectSingleNode("RESPONSECODE");
                 TempData["feeAmount"] = calFee.FEEAMOUNT;
                 return RedirectToAction("Index");
             }
