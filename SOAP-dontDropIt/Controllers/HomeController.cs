@@ -26,5 +26,11 @@ namespace SOAP_dontDropIt.Controllers
 
             return View();
         }
+        // GET: /Account/Help
+        public ActionResult Help()
+        {
+            return View();
+        }
+
     }
 }

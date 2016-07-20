@@ -168,11 +168,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\XMLObjectSerializer.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CalculateFeeModels.cs" />
     <Compile Include="Models\CalculateFeeResponseModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProcessTransactionEncryptedModels.cs" />
+    <Compile Include="Models\ProcessTransactionModels.cs" />
     <Compile Include="Models\VirtualTerminalTransactionModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -226,6 +229,9 @@
     <Content Include="Views\LegacyServices\VirtualTerminalTransaction.cshtml" />
     <Content Include="Views\MagicServices\CalculateFee.cshtml" />
     <Content Include="Views\MagicServices\VirtualTerminalTransaction.cshtml" />
+    <Content Include="Views\LegacyServices\Index.cshtml" />
+    <Content Include="Views\MagicServices\Index.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />
@@ -281,6 +287,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
