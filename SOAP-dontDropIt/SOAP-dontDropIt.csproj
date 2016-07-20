@@ -162,7 +162,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CalculateFeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LegacyAPIController.cs" />
+    <Compile Include="Controllers\LegacyServicesController.cs" />
+    <Compile Include="Controllers\MagicServicesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -181,6 +182,11 @@
     </Compile>
     <Compile Include="Startup.cs" />
     <Compile Include="Web References\com.collectorsolutions.secure.legacy\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\com.collectorsolutions.stage\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -216,9 +222,12 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\LegacyAPI\CalculateFee.cshtml" />
-    <Content Include="Views\LegacyAPI\VirtualTerminalTransaction.cshtml" />
+    <Content Include="Views\LegacyServices\CalculateFee.cshtml" />
+    <Content Include="Views\LegacyServices\VirtualTerminalTransaction.cshtml" />
+    <Content Include="Views\MagicServices\CalculateFee.cshtml" />
+    <Content Include="Views\MagicServices\VirtualTerminalTransaction.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
+    <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,6 +265,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.wsdl" />
     <Content Include="Web References\com.collectorsolutions.secure.legacy\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.wsdl" />
+    <Content Include="Web References\com.collectorsolutions.stage\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
@@ -303,6 +317,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>SOAP_dontDropIt_com_collectorsolutions_secure_legacy_ProcessingGateway</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://stage.collectorsolutions.com/magic-services/">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.collectorsolutions.stage\</RelPath>
+      <UpdateFromURL>https://stage.collectorsolutions.com/magic-services/</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SOAP_dontDropIt_com_collectorsolutions_stage_ProcessingGateway</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

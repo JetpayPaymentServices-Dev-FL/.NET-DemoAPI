@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml;
@@ -10,7 +11,7 @@ using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Controllers
 {
-    public class LegacyAPIController : Controller
+    public class MagicServicesController : Controller
     {
         // GET: LegacyAPI
         public ActionResult Index()
@@ -37,10 +38,11 @@ namespace SOAP_dontDropIt.Controllers
         {
             try
             {
-                com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
-                //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
+                //csi-live
                 XmlDocument xmlRequest = new XmlDocument();
-               // XmlDocument xmlResponse = new XmlDocument();
+                // XmlDocument xmlResponse = new XmlDocument();
                 var xml = String.Empty;
                 XmlSerializer xsSubmit = new XmlSerializer(typeof(CalculateFeeModels.FEE));
                 using (StringWriter sww = new StringWriter())
@@ -74,8 +76,9 @@ namespace SOAP_dontDropIt.Controllers
         {
             try
             {
-                com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
-                //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
+                //csi-live
                 XmlDocument xmlRequest = new XmlDocument();
                 var xml = String.Empty;
                 //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp?transID=" + transaction.TRANSACTIONID + "&status=2";

@@ -43,5 +43,15 @@ namespace SOAP_dontDropIt.Properties {
                 return ((string)(this["SOAP_dontDropIt_com_collectorsolutions_secure_legacy_ProcessingGateway"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://stage.collectorsolutions.com/magic-services/ProcessingGateway.asmx")]
+        public string SOAP_dontDropIt_com_collectorsolutions_stage_ProcessingGateway {
+            get {
+                return ((string)(this["SOAP_dontDropIt_com_collectorsolutions_stage_ProcessingGateway"]));
+            }
+        }
     }
 }
