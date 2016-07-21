@@ -232,6 +232,7 @@
     <Content Include="Views\LegacyServices\Index.cshtml" />
     <Content Include="Views\MagicServices\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
+    <Content Include="Views\LegacyServices\_CalculateFeeResponsePartial.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />

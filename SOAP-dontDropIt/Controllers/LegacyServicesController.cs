@@ -13,7 +13,7 @@ namespace SOAP_dontDropIt.Controllers
 {
     public class LegacyServicesController : Controller
     {
-        // GET: LegacyAPI
+        // GET: LegacyAPI Index
         public ActionResult Index()
         {
             return View();
@@ -22,17 +22,9 @@ namespace SOAP_dontDropIt.Controllers
         [HttpGet]
         public ActionResult CalculateFee()
         {
-            //var feeReponse = new CalculateFeeResponseModels.FEE()
-            //feeReponse = TempData["CalculateFeeResponse"];
-            //if(reponse == null){
-            //    return View();
-            //    //reponse = (TempData["CalculateFeeResponse"] as CalculateFeeResponseModels.FEE);
-            //}
-            //var model = TempData["CalculateFeeResponse"];
             return View();
         }
-
-        // POST: CalculateFee/Create
+        // POST: CalculateFee
         [HttpPost]
         public ActionResult CalculateFee(CalculateFeeModels.FEE collection)
         {
@@ -46,8 +38,9 @@ namespace SOAP_dontDropIt.Controllers
                 var reader = new StringReader(ws.calculateFee(xmlRequest).OuterXml);
                 var serializer = new XmlSerializer(typeof(CalculateFeeResponseModels.FEE));
                 var instance = (CalculateFeeResponseModels.FEE)serializer.Deserialize(reader);
-                TempData["CalculateFeeResponse"] = instance.FEEAMOUNT;
-                return RedirectToAction("CalculateFee");
+                //send data to partial view so it can be displayed//
+                TempData["CalculateFeeResponse"] = instance;
+                return View();
             }
             catch
             {
