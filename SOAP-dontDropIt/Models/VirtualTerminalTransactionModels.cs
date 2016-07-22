@@ -62,7 +62,7 @@ namespace SOAP_dontDropIt.Models
         [XmlRoot(ElementName = "VT_TRANSACTION")]
         public class VT_TRANSACTION
         {
-            [DisplayName("Client Key")]
+            [DisplayName("Client Key"), Description("herror")]
             [XmlElement(ElementName = "CLIENTKEY")]
             public string CLIENTKEY { get; set; }
             [DisplayName("Transaction Identifier")]
@@ -107,10 +107,12 @@ namespace SOAP_dontDropIt.Models
             [DisplayName("Notes")]
             [XmlElement(ElementName = "NOTES")]
             public string NOTES { get; set; }
+            [DisplayName("CSI User Identifier")]
             [XmlElement(ElementName = "CSIUSERID")]
             public string CSIUSERID { get; set; }
             [XmlElement(ElementName = "LINEITEM")]
             public LINEITEM LINEITEM { get; set; }
+            [DisplayName("URL Silent Post")]
             [XmlElement(ElementName = "URLSILENTPOST")]
             public string URLSILENTPOST { get; set; }
             [XmlElement(ElementName = "URLRETURNPOST")]

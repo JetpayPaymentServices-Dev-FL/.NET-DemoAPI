@@ -16,73 +16,72 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.CLIENTKEY, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CLIENTKEY, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.CLIENTKEY, new { htmlAttributes = new { @class = "form-control", @Value = "9873rfrf5673mjkmnhyu675tr498iu78" } })
                 @Html.ValidationMessageFor(model => model.CLIENTKEY, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.TRANSACTIONID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.TRANSACTIONID, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.TRANSACTIONID, new { htmlAttributes = new { @class = "form-control", @Value = Guid.NewGuid().ToString().Replace("-","") } })
                 @Html.ValidationMessageFor(model => model.TRANSACTIONID, "", new { @class = "text-danger" })
-                <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="For testing purposes only. Client should provide their own Transaction ID at time of deployment. Make note of the ID, it is used for transaction information retrival with Virtual Terminal Get." aria-hidden="true"></i>
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.COLLECTIONMODE, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.COLLECTIONMODE, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.COLLECTIONMODE, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
                 @Html.ValidationMessageFor(model => model.COLLECTIONMODE, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.AMOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.AMOUNT, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.AMOUNT, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.AMOUNT, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.CSIUSERID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.CSIUSERID, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.CSIUSERID, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CSIUSERID, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.LINEITEM.PAYMENTID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.LINEITEM.PAYMENTID, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.LINEITEM.PAYMENTID, new { htmlAttributes = new { @class = "form-control", @Value = Guid.NewGuid().ToString().Replace("-", "").Substring(0,9)} })
                 @Html.ValidationMessageFor(model => model.LINEITEM.PAYMENTID, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.LINEITEM.ITEMAMOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.LINEITEM.ITEMAMOUNT, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.LINEITEM.ITEMAMOUNT, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.LINEITEM.ITEMAMOUNT, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
                 @Html.ValidationMessageFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, "", new { @class = "text-danger" })
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.URLSILENTPOST, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            @Html.LabelFor(model => model.URLSILENTPOST, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
                 @Html.EditorFor(model => model.URLSILENTPOST, new { htmlAttributes = new { @class = "form-control", @Value = "" } })
                 @Html.ValidationMessageFor(model => model.URLSILENTPOST, "", new { @class = "text-danger" })
             </div>
         </div>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-offset-3 col-md-6">
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </div>
     </div>

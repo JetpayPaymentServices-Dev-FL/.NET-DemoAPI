@@ -207,6 +207,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\magic-text-logo.png" />
     <Content Include="Images\magicUtils.png" />
     <Content Include="Images\ring-alt.gif" />
     <Content Include="Scripts\bootstrap.js" />

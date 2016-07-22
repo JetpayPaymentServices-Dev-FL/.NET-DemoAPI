@@ -18,14 +18,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="@Url.Action("Index", "Home")">
-                    <img src="~/Images/magicUtils.png" class="img-rounded" alt="logo" height="50">
+                    <img src="~/Images/magic-text-logo.png" alt="logo" height="50">
                     </a>
 </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    <li>@Html.ActionLink("Legacy Services", "Index", "LegacyServices")</li>
                     <li>@Html.ActionLink("Magic Services", "Index", "MagicServices")</li>
+                    <li>@Html.ActionLink("Legacy Services", "Index", "LegacyServices")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
