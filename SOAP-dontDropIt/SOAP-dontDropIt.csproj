@@ -168,6 +168,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\StateExtension.cs" />
     <Compile Include="Helpers\XMLObjectSerializer.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CalculateFeeModels.cs" />
@@ -177,6 +178,7 @@
     <Compile Include="Models\ProcessTransactionEncryptedModels.cs" />
     <Compile Include="Models\ProcessTransactionModels.cs" />
     <Compile Include="Models\VirtualTerminalTransactionModels.cs" />
+    <Compile Include="Models\VirtualTerminalTransactionResponseModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -237,6 +239,9 @@
     <Content Include="Views\MagicServices\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\LegacyServices\_CalculateFeeResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_VirtualTerminalResponsePartial.cshtml" />
+    <Content Include="Views\LegacyServices\_VirtualTerminalResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_CalculateFeeResponsePartial.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />

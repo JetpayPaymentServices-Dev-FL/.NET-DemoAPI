@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.WebPages.Html;
 using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Models
@@ -12,16 +14,16 @@ namespace SOAP_dontDropIt.Models
         [XmlRoot(ElementName = "LINEITEM")]
         public class LINEITEM
         {
-            [DisplayName("Payment Identifier")]
+            [DisplayName("Account")]
             [XmlElement(ElementName = "PAYMENTID")]
             public string PAYMENTID { get; set; }
-            [DisplayName("Payment Identifier Secondary")]
+            [DisplayName("Account Secondary")]
             [XmlElement(ElementName = "PAYMENTID_SECONDARY")]
             public string PAYMENTID_SECONDARY { get; set; }
-            [DisplayName("Item Amount")]
+            [DisplayName("Line Item Amount")]
             [XmlElement(ElementName = "ITEMAMOUNT")]
             public string ITEMAMOUNT { get; set; }
-            [DisplayName("Client Payment Type Identifier")]
+            [DisplayName("Customer Payment Type Identifier")]
             [XmlElement(ElementName = "CUSTOMERPAYMENTTYPEID")]
             public string CUSTOMERPAYMENTTYPEID { get; set; }
             [DisplayName("Miscellaneous One")]
@@ -90,6 +92,7 @@ namespace SOAP_dontDropIt.Models
             [XmlElement(ElementName = "COUNTY")]
             public string COUNTY { get; set; }
             [DisplayName("State")]
+            [RegularExpression("[A-Z]{2}")]
             [XmlElement(ElementName = "STATE")]
             public string STATE { get; set; }
             [DisplayName("Country")]
