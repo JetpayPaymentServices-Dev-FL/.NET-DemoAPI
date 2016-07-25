@@ -1,4 +1,5 @@
-﻿using SOAP_dontDropIt.Models;
+﻿using SOAP_dontDropIt.Helpers;
+using SOAP_dontDropIt.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,46 +23,33 @@ namespace SOAP_dontDropIt.Controllers
         [HttpGet]
         public ActionResult CalculateFee()
         {
-            //var feeReponse = new CalculateFeeResponseModels.FEE()
-            //feeReponse = TempData["CalculateFeeResponse"];
-            //if(reponse == null){
-            //    return View();
-            //    //reponse = (TempData["CalculateFeeResponse"] as CalculateFeeResponseModels.FEE);
-            //}
-            //var model = TempData["CalculateFeeResponse"];
             return View();
         }
 
         // POST: CalculateFee/Create
         [HttpPost]
-        public ActionResult CalculateFee(CalculateFeeModels.FEE collection)
+        public ActionResult CalculateFee(CalculateFeeModels.FEE fee)
         {
             try
             {
                 ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
                 com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
-                //csi-live
                 XmlDocument xmlRequest = new XmlDocument();
-                // XmlDocument xmlResponse = new XmlDocument();
-                var xml = String.Empty;
-                XmlSerializer xsSubmit = new XmlSerializer(typeof(CalculateFeeModels.FEE));
-                using (StringWriter sww = new StringWriter())
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, collection);
-                    xml = sww.ToString();
-                }
-                xmlRequest.LoadXml(xml);
+                XMLObjectSerializer obj = new XMLObjectSerializer();
+                xmlRequest.LoadXml(obj.objectXMLConverter<CalculateFeeModels.FEE>(fee));
+                //post/receive response//
                 var reader = new StringReader(ws.calculateFee(xmlRequest).OuterXml);
                 var serializer = new XmlSerializer(typeof(CalculateFeeResponseModels.FEE));
-                var instance = (CalculateFeeResponseModels.FEE)serializer.Deserialize(reader);
-                TempData["CalculateFeeResponse"] = instance.FEEAMOUNT;
-                return RedirectToAction("CalculateFee");
-            }
-            catch
-            {
+                var response = (CalculateFeeResponseModels.FEE)serializer.Deserialize(reader);
+                //send data to partial view so it can be displayed//
+                TempData["CalculateFeeResponse"] = response;
                 return View();
             }
+            catch (Exception e)
+            {
+                Response.Redirect("~/Shared/Error.cshtml");
+            }
+            return View();
         }
         // GET: VirtualTerminalTransaction
         [HttpGet]
@@ -78,29 +66,28 @@ namespace SOAP_dontDropIt.Controllers
             {
                 ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
                 com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
-                //csi-live
                 XmlDocument xmlRequest = new XmlDocument();
-                var xml = String.Empty;
-                //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp?transID=" + transaction.TRANSACTIONID + "&status=2";
-                transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp";
-                XmlSerializer xsSubmit = new XmlSerializer(typeof(VirtualTerminalTransactionModels.VT_TRANSACTION));
-                using (StringWriter sww = new StringWriter())
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, transaction);
-                    xml = sww.ToString();
-                }
-                xmlRequest.LoadXml(xml);
+                XMLObjectSerializer obj = new XMLObjectSerializer();
+                //stub any optional/required parameters here that are not in the view//
+                transaction.COLLECTIONMODE = "1";
+                transaction.CSIUSERID = "1";
+                transaction.URLSILENTPOST = "http://collectorsolutions.com/#/";
+                xmlRequest.LoadXml(obj.objectXMLConverter<VirtualTerminalTransactionModels.VT_TRANSACTION>(transaction));
+                //post/receive response//
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
-                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionModels.VT_TRANSACTION));
-                var instance = (VirtualTerminalTransactionModels.VT_TRANSACTION)serializer.Deserialize(reader);
-                //TempData["CalculateFeeResponse"] = instance;
-                return RedirectToAction("VirtualTerminalTransaction");
+                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionResponseModels.VT_TRANSACTION));
+                var response = (VirtualTerminalTransactionResponseModels.VT_TRANSACTION)serializer.Deserialize(reader);
+                //send data to partial view so it can be displayed//
+                TempData["VTPostResponse"] = response;
+                //VirtualTerminal/{clientid}/{transactionid}
+                return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
+                //return View();
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                Response.Redirect("~/Shared/Error.cshtml");
             }
+            return View();
         }
     }
 }

@@ -37,9 +37,9 @@ namespace SOAP_dontDropIt.Controllers
                 //post/receive response//
                 var reader = new StringReader(ws.calculateFee(xmlRequest).OuterXml);
                 var serializer = new XmlSerializer(typeof(CalculateFeeResponseModels.FEE));
-                var instance = (CalculateFeeResponseModels.FEE)serializer.Deserialize(reader);
+                var response = (CalculateFeeResponseModels.FEE)serializer.Deserialize(reader);
                 //send data to partial view so it can be displayed//
-                TempData["CalculateFeeResponse"] = instance;
+                TempData["CalculateFeeResponse"] = response;
                 return View();
             }
             catch
