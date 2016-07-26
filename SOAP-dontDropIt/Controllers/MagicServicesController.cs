@@ -64,14 +64,14 @@ namespace SOAP_dontDropIt.Controllers
         {
             try
             {
-                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; //tls protocol override
                 com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
                 XmlDocument xmlRequest = new XmlDocument();
                 XMLObjectSerializer obj = new XMLObjectSerializer();
                 //stub any optional/required parameters here that are not in the view//
                 transaction.COLLECTIONMODE = "1";
                 transaction.CSIUSERID = "1";
-                transaction.URLSILENTPOST = "http://collectorsolutions.com/#/";
+                transaction.URLSILENTPOST = "";
                 xmlRequest.LoadXml(obj.objectXMLConverter<VirtualTerminalTransactionModels.VT_TRANSACTION>(transaction));
                 //post/receive response//
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
