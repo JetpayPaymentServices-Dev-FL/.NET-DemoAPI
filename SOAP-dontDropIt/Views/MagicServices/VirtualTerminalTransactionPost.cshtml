@@ -1,0 +1,177 @@
+﻿@model SOAP_dontDropIt.Models.VirtualTerminalTransactionPostModels.VT_TRANSACTION
+@using SOAP_dontDropIt.Models;
+@using SOAP_dontDropIt.Helpers;
+@{
+    ViewBag.Title = "Virtual Terminal Transaction";
+}
+<div class="loader"></div>
+<div class="container">
+        <h2>Virtual Terminal Transaction (POST)</h2>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Virtual Terminal TransactionModels POST Using .NET XDocument XML </h4>
+        <hr />
+        <div class="well">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.CLIENTKEY, htmlAttributes: new { @class = "control-label col-md-2" })
+                <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="Client api key (unique identifier) i.e. '8E3F2...' usually 32 characters in length" aria-hidden="true"></i>
+
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.CLIENTKEY, new { htmlAttributes = new { @class = "form-control", @Value = "8E3F20CE5619431D9BE737FD80E3E990" } })
+                    @Html.ValidationMessageFor(model => model.CLIENTKEY, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.TRANSACTIONID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="For testing purposes only. Client should provide their own Transaction ID at time of deployment. Make note of the ID, it is used for transaction information retrival with Virtual Terminal Get." aria-hidden="true"></i>
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.TRANSACTIONID, new { htmlAttributes = new { @class = "form-control", @Value = Guid.NewGuid().ToString().Replace("-", "") } })
+                    @Html.ValidationMessageFor(model => model.TRANSACTIONID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, htmlAttributes: new { @class = "control-label col-md-2" })
+                <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="Client payment type name i.e. 'Business Tax' or whatever client provided as an ID" aria-hidden="true"></i>
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, new { htmlAttributes = new { @class = "form-control", @Value = "Business Tax" } })
+                    @Html.ValidationMessageFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2">Generate Random Data</label>
+            <div class="col-md-4">
+                <input type="button" class="btn btn-default btnGenerate" id="rndGenerate" value="Random Transaction" />
+            </div>
+        </div>
+        <div class="well" style="background-color:#ffffff">
+            <div class="form-group">
+                @Html.LabelFor(model => model.AMOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <div class="input-group-addon">$</div>
+                        @Html.EditorFor(model => model.AMOUNT, new { htmlAttributes = new { @class = "form-control", @id = "amount" } })
+                        @Html.ValidationMessageFor(model => model.AMOUNT, "", new { @class = "text-danger" })
+                        <div class="input-group-addon">.00</div>
+                    </div>
+                </div>
+        </div>
+        <hr />
+        <div class=" form-group">
+            @Html.LabelFor(model => model.LINEITEM.PAYMENTID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.LINEITEM.PAYMENTID, new { htmlAttributes = new { @class = "form-control", @Value = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 9), @id = "paymentID" } })
+                @Html.ValidationMessageFor(model => model.LINEITEM.PAYMENTID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LINEITEM.PAYMENTID_SECONDARY, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.LINEITEM.PAYMENTID_SECONDARY, new { htmlAttributes = new { @class = "form-control", @Value = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 9), @id = "paymentIDSecondary" } })
+                @Html.ValidationMessageFor(model => model.LINEITEM.PAYMENTID_SECONDARY, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LINEITEM.ITEMAMOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                <div class="input-group">
+                    <div class="input-group-addon">$</div>
+                    @Html.EditorFor(model => model.LINEITEM.ITEMAMOUNT, new { htmlAttributes = new { @class = "form-control", @id = "lineItemAmount" } })
+                    @Html.ValidationMessageFor(model => model.LINEITEM.ITEMAMOUNT, "", new { @class = "text-danger" })
+                    <div class="input-group-addon">.00</div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            @Html.LabelFor(model => model.NAME, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
+                @Html.ValidationMessageFor(model => model.NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ADDRESS, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.ADDRESS, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ADDRESS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CITY, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.CITY, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CITY, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.STATE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.STATE, StateExtension.GetStatesList(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.STATE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ZIP, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.ZIP, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ZIP, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.COUNTRY, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownListFor(model => model.COUNTRY, StateExtension.GetCountriesList(), new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.COUNTRY, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMAIL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PHONE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.PHONE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PHONE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.NOTES, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.TextAreaFor(model => model.NOTES,  new { @class = "form-control", @rows = 3 } )
+                    @Html.ValidationMessageFor(model => model.NOTES, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-8">
+                    <input type="submit" value="Submit" class="btn btn-lg btn-primary btnSubmit" />
+                </div>
+            </div>
+    </div>
+                </div>
+
+        }
+    </div>
+@{
+    var vtPostResponse = (TempData["VTPostResponse"] as VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION);
+}
+<p>
+    @{
+        Html.RenderPartial("_VirtualTerminalResponsePostPartial", vtPostResponse);
+    }
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
