@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Models
 {
-    public class VirtualTerminalTransactionModels
+    public class VirtualTerminalTransactionPostModels
     {
         [XmlRoot(ElementName = "LINEITEM")]
         public class LINEITEM

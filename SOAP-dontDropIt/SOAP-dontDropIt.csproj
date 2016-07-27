@@ -177,8 +177,10 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ProcessTransactionEncryptedModels.cs" />
     <Compile Include="Models\ProcessTransactionModels.cs" />
-    <Compile Include="Models\VirtualTerminalTransactionModels.cs" />
-    <Compile Include="Models\VirtualTerminalTransactionResponseModels.cs" />
+    <Compile Include="Models\VirtualTerminalTransactionGetModels.cs" />
+    <Compile Include="Models\VirtualTerminalTransactionPostModels.cs" />
+    <Compile Include="Models\VirtualTerminalTransactionGetResponseModels.cs" />
+    <Compile Include="Models\VirtualTerminalTransactionPostResponseModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -234,14 +236,19 @@
     <Content Include="Views\LegacyServices\CalculateFee.cshtml" />
     <Content Include="Views\LegacyServices\VirtualTerminalTransaction.cshtml" />
     <Content Include="Views\MagicServices\CalculateFee.cshtml" />
-    <Content Include="Views\MagicServices\VirtualTerminalTransaction.cshtml" />
+    <Content Include="Views\MagicServices\VirtualTerminalTransactionPost.cshtml" />
     <Content Include="Views\LegacyServices\Index.cshtml" />
     <Content Include="Views\MagicServices\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\LegacyServices\_CalculateFeeResponsePartial.cshtml" />
-    <Content Include="Views\MagicServices\_VirtualTerminalResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_VirtualTerminalPostResponsePartial.cshtml" />
     <Content Include="Views\LegacyServices\_VirtualTerminalResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_CalculateFeeResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\VirtualTerminalTransactionGet.cshtml" />
+    <Content Include="Views\LegacyServices\VirtualTerminalTransactionGet.cshtml" />
+    <Content Include="Views\LegacyServices\VirtualTerminalTransactionPost.cshtml" />
+    <Content Include="Views\LegacyServices\_VirtualTerminalGetResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_VirtualTerminalGetResponsePartial.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />

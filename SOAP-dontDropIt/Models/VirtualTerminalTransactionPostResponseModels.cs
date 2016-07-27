@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Models
 {
-    public class VirtualTerminalTransactionResponseModels
+    public class VirtualTerminalTransactionPostResponseModels
     {
         [XmlRoot(ElementName = "VT_TRANSACTION")]
         public class VT_TRANSACTION

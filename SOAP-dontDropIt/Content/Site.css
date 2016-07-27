@@ -35,3 +35,7 @@ textarea {
     z-index: 9999;
     background: url('../Images/ring-alt.gif') 50% 50% no-repeat rgba(249,249,249,0.7);
 }
+a.disabled
+{
+    color: #CCC;
+}

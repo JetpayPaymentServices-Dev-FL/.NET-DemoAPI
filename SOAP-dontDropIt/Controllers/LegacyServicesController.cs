@@ -56,7 +56,7 @@ namespace SOAP_dontDropIt.Controllers
 
         // POST: VirtualTerminalTransaction
         [HttpPost]
-        public ActionResult VirtualTerminalTransaction(VirtualTerminalTransactionModels.VT_TRANSACTION transaction)
+        public ActionResult VirtualTerminalTransaction(VirtualTerminalTransactionPostModels.VT_TRANSACTION transaction)
         {
             try
             {
@@ -66,7 +66,7 @@ namespace SOAP_dontDropIt.Controllers
                 var xml = String.Empty;
                 //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp?transID=" + transaction.TRANSACTIONID + "&status=2";
                 transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp";
-                XmlSerializer xsSubmit = new XmlSerializer(typeof(VirtualTerminalTransactionModels.VT_TRANSACTION));
+                XmlSerializer xsSubmit = new XmlSerializer(typeof(VirtualTerminalTransactionPostModels.VT_TRANSACTION));
                 using (StringWriter sww = new StringWriter())
                 using (XmlWriter writer = XmlWriter.Create(sww))
                 {
@@ -75,8 +75,8 @@ namespace SOAP_dontDropIt.Controllers
                 }
                 xmlRequest.LoadXml(xml);
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
-                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionModels.VT_TRANSACTION));
-                var instance = (VirtualTerminalTransactionModels.VT_TRANSACTION)serializer.Deserialize(reader);
+                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionPostModels.VT_TRANSACTION));
+                var instance = (VirtualTerminalTransactionPostModels.VT_TRANSACTION)serializer.Deserialize(reader);
                 //TempData["CalculateFeeResponse"] = instance;
                 return RedirectToAction("VirtualTerminalTransaction");
             }

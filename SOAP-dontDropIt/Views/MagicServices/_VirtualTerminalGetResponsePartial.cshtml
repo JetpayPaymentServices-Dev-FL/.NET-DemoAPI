@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SOAP_dontDropIt.Models.VirtualTerminalTransactionGetResponseModels>
+
+
+@if (Model != null)
+{
+<div class="container">
+    <div class="col-md-6 col-md-offset-3" style="padding-left:0;">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Calculate Fee Response</h3>
+            </div>
+            <div class="panel-body">
+               @foreach (var item in Model)
+               {
+                <div>@item</div>
+               }
+                @*<table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Fee Amount</td>
+                            <td>Response Code</td>
+                        </tr>
+                        <tr>
+                            <td><strong>@Model.FEEAMOUNT</strong></td>
+                            <td><strong>@Model.RESPONSECODE</strong></td>
+                        </tr>
+                    </tbody>
+                </table>*@
+            </div>
+        </div>
+    </div>
+</div>
+    }
