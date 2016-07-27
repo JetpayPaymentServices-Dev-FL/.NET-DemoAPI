@@ -164,10 +164,8 @@
 @{
     var vtPostResponse = (TempData["VTPostResponse"] as VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION);
 }
-<p>
-    @{
-        Html.RenderPartial("_VirtualTerminalResponsePostPartial", vtPostResponse);
-    }
+  
+        @Html.Partial("_VirtualTerminalTransactionPostResponsePartial", vtPostResponse)
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>

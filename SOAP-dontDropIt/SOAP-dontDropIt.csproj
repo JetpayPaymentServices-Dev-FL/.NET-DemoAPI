@@ -211,6 +211,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\jetpay-small.png" />
     <Content Include="Images\magic-text-logo.png" />
     <Content Include="Images\magicUtils.png" />
     <Content Include="Images\ring-alt.gif" />
@@ -241,14 +243,14 @@
     <Content Include="Views\MagicServices\Index.cshtml" />
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\LegacyServices\_CalculateFeeResponsePartial.cshtml" />
-    <Content Include="Views\MagicServices\_VirtualTerminalPostResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_VirtualTerminalTransactionPostResponsePartial.cshtml" />
     <Content Include="Views\LegacyServices\_VirtualTerminalResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_CalculateFeeResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\VirtualTerminalTransactionGet.cshtml" />
     <Content Include="Views\LegacyServices\VirtualTerminalTransactionGet.cshtml" />
     <Content Include="Views\LegacyServices\VirtualTerminalTransactionPost.cshtml" />
     <Content Include="Views\LegacyServices\_VirtualTerminalGetResponsePartial.cshtml" />
-    <Content Include="Views\MagicServices\_VirtualTerminalGetResponsePartial.cshtml" />
+    <Content Include="Views\MagicServices\_VirtualTerminalTransactionGetResponsePartial.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />

@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - .NET Magic Services</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="~/Images/favicon.png" />
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,7 +36,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - JetPay Payments Services, FL, LLC<a class="pull-right" href="http://api.collectorsolutions.com/">CSI Legacy Web Services Documentation</a></p>
+            <p>
+                <a href="http://www.jetpay.com/payments-products-servies.php" target="_blank"><img src="~/Images/jetpay-small.png" class="img-responsive" /></a>  &copy; @DateTime.Now.Year - JetPay Payments Services, FL, LLC<a class="pull-right" href="http://api.collectorsolutions.com/">CSI Legacy Web Services Documentation</a></p>
         </footer>
     </div>
 
