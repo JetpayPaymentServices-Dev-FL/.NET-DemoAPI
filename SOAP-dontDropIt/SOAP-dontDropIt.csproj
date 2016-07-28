@@ -173,10 +173,17 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CalculateFeeModels.cs" />
     <Compile Include="Models\CalculateFeeResponseModels.cs" />
+    <Compile Include="Models\ExportDetailedTransactionsModels.cs" />
+    <Compile Include="Models\ExportDetailedTransactionsResponseModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProcessCreditModels.cs" />
+    <Compile Include="Models\ProcessCreditResponseModels.cs" />
     <Compile Include="Models\ProcessTransactionEncryptedModels.cs" />
     <Compile Include="Models\ProcessTransactionModels.cs" />
+    <Compile Include="Models\ProcessTransactionResponseModels.cs" />
+    <Compile Include="Models\VerifyTransactionModels.cs" />
+    <Compile Include="Models\VerifyTransactionResponseModels.cs" />
     <Compile Include="Models\VirtualTerminalTransactionGetModels.cs" />
     <Compile Include="Models\VirtualTerminalTransactionPostModels.cs" />
     <Compile Include="Models\VirtualTerminalTransactionGetResponseModels.cs" />
@@ -236,7 +243,6 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\LegacyServices\CalculateFee.cshtml" />
-    <Content Include="Views\LegacyServices\VirtualTerminalTransaction.cshtml" />
     <Content Include="Views\MagicServices\CalculateFee.cshtml" />
     <Content Include="Views\MagicServices\VirtualTerminalTransactionPost.cshtml" />
     <Content Include="Views\LegacyServices\Index.cshtml" />

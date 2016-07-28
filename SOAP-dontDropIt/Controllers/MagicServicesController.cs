@@ -123,5 +123,73 @@ namespace SOAP_dontDropIt.Controllers
             }
             return View();
         }
+        // GET: Process Credit
+        [HttpGet]
+        public ActionResult ProcessCredit()
+        {
+            return View();
+        }
+
+        // POST: ProcessCredit
+        [HttpPost]
+        public ActionResult ProcessCredit(ProcessCreditModels.CREDIT transaction)
+        {
+            try
+            {
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; //tls protocol override
+                com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
+                XmlDocument xmlRequest = new XmlDocument();
+                XMLObjectSerializer obj = new XMLObjectSerializer();
+                //stub any optional/required parameters here that are not in the view//
+                xmlRequest.LoadXml(obj.objectXMLConverter<ProcessCreditModels.CREDIT>(transaction));
+                //post/receive response//
+                var reader = new StringReader(ws.processCredit(xmlRequest).OuterXml);
+                var serializer = new XmlSerializer(typeof(ProcessCreditResponseModels.CREDIT));
+                var response = (ProcessCreditResponseModels.CREDIT)serializer.Deserialize(reader);
+                //send data to partial view so it can be displayed//
+                TempData["ProcessCreditResponse"] = response;
+                //VirtualTerminal/{clientid}/{transactionid}
+                return View();
+            }
+            catch (Exception e)
+            {
+                Response.Redirect("~/Shared/Error.cshtml");
+            }
+            return View();
+        }
+
+        // GET: Export detailed transactions
+        [HttpGet]
+        public ActionResult ExportDetailedTransactions()
+        {
+            return View();
+        }
+
+        // POST: Export detailed transactions
+        [HttpPost]
+        public ActionResult ExportDetailedTransactions(ExportDetailedTransactionsModels.EXPORT transaction)
+        {
+            try
+            {
+                ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072; //tls protocol override
+                com.collectorsolutions.stage.ProcessingGateway ws = new com.collectorsolutions.stage.ProcessingGateway(); //The web service
+                XmlDocument xmlRequest = new XmlDocument();
+                XMLObjectSerializer obj = new XMLObjectSerializer();
+                //stub any optional/required parameters here that are not in the view//
+                xmlRequest.LoadXml(obj.objectXMLConverter<ExportDetailedTransactionsModels.EXPORT>(transaction));
+                //post/receive response//
+                var reader = new StringReader(ws.export_DetailedTransactions(xmlRequest).OuterXml);
+                var serializer = new XmlSerializer(typeof(ExportDetailedTransactionsResponseModels.EXPORT));
+                var response = (ExportDetailedTransactionsResponseModels.EXPORT)serializer.Deserialize(reader);
+                //send data to partial view so it can be displayed//
+                TempData["ExportDetailedTransactionsResponse"] = response;
+                return View();
+            }
+            catch (Exception e)
+            {
+                Response.Redirect("~/Shared/Error.cshtml");
+            }
+            return View();
+        }
     }
 }
