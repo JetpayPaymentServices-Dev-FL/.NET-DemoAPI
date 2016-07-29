@@ -80,7 +80,8 @@ namespace SOAP_dontDropIt.Controllers
                 //send data to partial view so it can be displayed//
                 TempData["VTPostResponse"] = response;
                 //VirtualTerminal/{clientid}/{transactionid}
-                return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
+                //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
+                //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
                 //return View();
             }
             catch (Exception e)
