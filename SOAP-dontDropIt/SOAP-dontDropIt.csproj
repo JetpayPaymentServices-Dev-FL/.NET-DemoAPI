@@ -250,13 +250,13 @@
     <Content Include="Views\Home\Help.cshtml" />
     <Content Include="Views\LegacyServices\_CalculateFeeResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_VirtualTerminalTransactionPostResponsePartial.cshtml" />
-    <Content Include="Views\LegacyServices\_VirtualTerminalResponsePartial.cshtml" />
+    <Content Include="Views\LegacyServices\_VirtualTerminalTransactionPostResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_CalculateFeeResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\VirtualTerminalTransactionGet.cshtml" />
     <Content Include="Views\LegacyServices\VirtualTerminalTransactionGet.cshtml" />
-    <Content Include="Views\LegacyServices\VirtualTerminalTransactionPost.cshtml" />
-    <Content Include="Views\LegacyServices\_VirtualTerminalGetResponsePartial.cshtml" />
+    <Content Include="Views\LegacyServices\_VirtualTerminalTransactionGetResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_VirtualTerminalTransactionGetResponsePartial.cshtml" />
+    <Content Include="Views\LegacyServices\VirtualTerminalTransactionPost.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />
@@ -300,10 +300,10 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.wsdl" />
-    <Content Include="Web References\com.collectorsolutions.stage\Reference.map">
+    <None Include="Web References\com.collectorsolutions.stage\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\www.dev\ProcessingGateway.wsdl" />
     <Content Include="Web References\www.dev\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>

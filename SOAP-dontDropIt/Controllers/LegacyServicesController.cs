@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Xml;
 using System.Xml.Serialization;
 using SOAP_dontDropIt.Helpers;
+using System.Text.RegularExpressions;
 
 namespace SOAP_dontDropIt.Controllers
 {
@@ -47,16 +48,16 @@ namespace SOAP_dontDropIt.Controllers
                 return View();
             }
         }
-        // GET: VirtualTerminalTransaction
+        // GET: VirtualTerminalTransactionPost
         [HttpGet]
-        public ActionResult VirtualTerminalTransaction()
+        public ActionResult VirtualTerminalTransactionPost()
         {
             return View();
         }
 
-        // POST: VirtualTerminalTransaction
+        // POST: VirtualTerminalTransactionPost
         [HttpPost]
-        public ActionResult VirtualTerminalTransaction(VirtualTerminalTransactionPostModels.VT_TRANSACTION transaction)
+        public ActionResult VirtualTerminalTransactionPost(VirtualTerminalTransactionPostModels.VT_TRANSACTION transaction)
         {
             try
             {
@@ -64,8 +65,8 @@ namespace SOAP_dontDropIt.Controllers
                 //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
                 XmlDocument xmlRequest = new XmlDocument();
                 var xml = String.Empty;
-                //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp?transID=" + transaction.TRANSACTIONID + "&status=2";
                 transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp";
+                transaction.PHONE = Regex.Replace(transaction.PHONE, @"\D", "");
                 XmlSerializer xsSubmit = new XmlSerializer(typeof(VirtualTerminalTransactionPostModels.VT_TRANSACTION));
                 using (StringWriter sww = new StringWriter())
                 using (XmlWriter writer = XmlWriter.Create(sww))
@@ -75,14 +76,22 @@ namespace SOAP_dontDropIt.Controllers
                 }
                 xmlRequest.LoadXml(xml);
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
-                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionPostModels.VT_TRANSACTION));
-                var instance = (VirtualTerminalTransactionPostModels.VT_TRANSACTION)serializer.Deserialize(reader);
-                //TempData["CalculateFeeResponse"] = instance;
-                return RedirectToAction("VirtualTerminalTransaction");
+                var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION));
+                var response = (VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION)serializer.Deserialize(reader);
+                TempData["VTPostResponse"] = response;
+                if (response.RESPONSECODE.StartsWith("Y"))
+                {
+                    //PCB Test
+                    return Redirect("https://secure.collectorsolutions.com/csi_ecollections_portal_ui/interchange.aspx?ciid=99999991&ste=5&transid=" + response.TRANSACTIONID);
+                }
+                else
+                {
+                    return View();
+                }
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                return Redirect("~/Shared/Error.cshtml");
             }
         }
         // GET: ProcessTransaction (unencrypted)

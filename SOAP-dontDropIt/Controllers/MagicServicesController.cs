@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Xml;
@@ -72,6 +73,7 @@ namespace SOAP_dontDropIt.Controllers
                 transaction.COLLECTIONMODE = "1";
                 transaction.CSIUSERID = "1";
                 transaction.URLSILENTPOST = "";
+                transaction.PHONE = Regex.Replace(transaction.PHONE, @"\D", "");
                 xmlRequest.LoadXml(obj.objectXMLConverter<VirtualTerminalTransactionPostModels.VT_TRANSACTION>(transaction));
                 //post/receive response//
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
@@ -80,15 +82,19 @@ namespace SOAP_dontDropIt.Controllers
                 //send data to partial view so it can be displayed//
                 TempData["VTPostResponse"] = response;
                 //VirtualTerminal/{clientid}/{transactionid}
-                //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
-                //return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
-                //return View();
+                if (response.RESPONSECODE.StartsWith("Y"))
+                {
+                    return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
+                }
+                else
+                {
+                    return View();
+                }
             }
             catch (Exception e)
             {
-                Response.Redirect("~/Shared/Error.cshtml");
+                return Redirect("~/Shared/Error.cshtml");
             }
-            return View();
         }
         // GET: VirtualTerminalTransaction
         [HttpGet]

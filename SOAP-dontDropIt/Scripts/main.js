@@ -40,11 +40,11 @@ function populateRandomData(obj) {
 };
 $('.btnSubmit').click(function (event) {
     $('.loader').fadeIn(function () {
-        $(this).delay(5000).fadeOut();
+        $(this).delay(10000).fadeOut();
     });
 });
-//function validateAreaCodePhone(phoneNumber) {
-//    var formattedPhone = phoneNumber.replace(/[^\d]/g, '');
-//    var phoneMinusArea = formattedPhone.slice(3, formattedPhone.length);
-//    return '850' + phoneMinusArea;
-//}
+$('.btnGenerate').click(function (event) {
+    $('.loader').fadeIn(function () {
+        $(this).delay(300).fadeOut();
+    });
+});

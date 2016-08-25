@@ -26,7 +26,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1038.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name="ProcessingGatewaySoap", Namespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/")]
+    [System.Web.Services.WebServiceBindingAttribute(Name="ProcessingGatewaySoap", Namespace="http://tempuri.org/")]
     public partial class ProcessingGateway : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback calculateFeeOperationCompleted;
@@ -248,7 +248,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         public event test_nonNETCompletedEventHandler test_nonNETCompleted;
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/calculateFee", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/calculateFee", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode calculateFee(System.Xml.XmlNode xmlFee) {
             object[] results = this.Invoke("calculateFee", new object[] {
                         xmlFee});
@@ -277,8 +277,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/calculatefee_nonNET" +
-            "_XMLObjectResponse", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/calculatefee_nonNET_XMLObjectResponse", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode calculatefee_nonNET_XMLObjectResponse(string strXML_Fee) {
             object[] results = this.Invoke("calculatefee_nonNET_XMLObjectResponse", new object[] {
                         strXML_Fee});
@@ -307,8 +306,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/calculatefee_nonNET" +
-            "", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/calculatefee_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string calculatefee_nonNET(string strXML_Fee) {
             object[] results = this.Invoke("calculatefee_nonNET", new object[] {
                         strXML_Fee});
@@ -337,7 +335,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processTransaction", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processTransaction", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode processTransaction(System.Xml.XmlNode xmlTransaction) {
             object[] results = this.Invoke("processTransaction", new object[] {
                         xmlTransaction});
@@ -366,8 +364,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processTransaction_" +
-            "nonNET_XMLObjectResponse", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processTransaction_nonNET_XMLObjectResponse", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode processTransaction_nonNET_XMLObjectResponse(string strXML_Transaction) {
             object[] results = this.Invoke("processTransaction_nonNET_XMLObjectResponse", new object[] {
                         strXML_Transaction});
@@ -396,8 +393,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processTransaction_" +
-            "nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processTransaction_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string processTransaction_nonNET(string strXML_Transaction) {
             object[] results = this.Invoke("processTransaction_nonNET", new object[] {
                         strXML_Transaction});
@@ -426,7 +422,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processCredit", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processCredit", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode processCredit(System.Xml.XmlNode xmlCredit) {
             object[] results = this.Invoke("processCredit", new object[] {
                         xmlCredit});
@@ -455,8 +451,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processCredit_nonNE" +
-            "T", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processCredit_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string processCredit_nonNET(string strXML_Credit) {
             object[] results = this.Invoke("processCredit_nonNET", new object[] {
                         strXML_Credit});
@@ -485,8 +480,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_GET_" +
-            "nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_GET_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string VT_Transaction_GET_nonNET(string strXML_GET) {
             object[] results = this.Invoke("VT_Transaction_GET_nonNET", new object[] {
                         strXML_GET});
@@ -515,7 +509,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_GET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_GET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_Transaction_GET(System.Xml.XmlNode xmlGet) {
             object[] results = this.Invoke("VT_Transaction_GET", new object[] {
                         xmlGet});
@@ -544,8 +538,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_POST" +
-            "", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_POST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_Transaction_POST(System.Xml.XmlNode xmlPost) {
             object[] results = this.Invoke("VT_Transaction_POST", new object[] {
                         xmlPost});
@@ -574,8 +567,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_POST" +
-            "_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_POST_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string VT_Transaction_POST_nonNET(string strXML_POST) {
             object[] results = this.Invoke("VT_Transaction_POST_nonNET", new object[] {
                         strXML_POST});
@@ -604,8 +596,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_GET_" +
-            "Manatron", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_GET_Manatron", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_Transaction_GET_Manatron(System.Xml.XmlNode xmlGet) {
             object[] results = this.Invoke("VT_Transaction_GET_Manatron", new object[] {
                         xmlGet});
@@ -634,8 +625,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_GET_" +
-            "Manatron_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_GET_Manatron_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string VT_Transaction_GET_Manatron_nonNET(string strXML_GET) {
             object[] results = this.Invoke("VT_Transaction_GET_Manatron_nonNET", new object[] {
                         strXML_GET});
@@ -664,8 +654,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_POST" +
-            "_Manatron", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_POST_Manatron", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_Transaction_POST_Manatron(System.Xml.XmlNode xmlPost) {
             object[] results = this.Invoke("VT_Transaction_POST_Manatron", new object[] {
                         xmlPost});
@@ -694,8 +683,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_Transaction_POST" +
-            "_Manatron_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_Transaction_POST_Manatron_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string VT_Transaction_POST_Manatron_nonNET(string strXML_POST) {
             object[] results = this.Invoke("VT_Transaction_POST_Manatron_nonNET", new object[] {
                         strXML_POST});
@@ -724,8 +712,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/recurringTransactio" +
-            "n_TokenCreation", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/recurringTransaction_TokenCreation", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode recurringTransaction_TokenCreation(System.Xml.XmlNode xmlTransaction) {
             object[] results = this.Invoke("recurringTransaction_TokenCreation", new object[] {
                         xmlTransaction});
@@ -754,8 +741,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/recurringTransactio" +
-            "n_TokenCreation_nonNet", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/recurringTransaction_TokenCreation_nonNet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string recurringTransaction_TokenCreation_nonNet(string strTransaction) {
             object[] results = this.Invoke("recurringTransaction_TokenCreation_nonNet", new object[] {
                         strTransaction});
@@ -784,8 +770,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_CreateToken_POST" +
-            "", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_CreateToken_POST", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_CreateToken_POST(System.Xml.XmlNode xmlPost) {
             object[] results = this.Invoke("VT_CreateToken_POST", new object[] {
                         xmlPost});
@@ -814,7 +799,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/VT_CreateToken_GET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/VT_CreateToken_GET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode VT_CreateToken_GET(System.Xml.XmlNode xmlGet) {
             object[] results = this.Invoke("VT_CreateToken_GET", new object[] {
                         xmlGet});
@@ -843,8 +828,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processRecurringTra" +
-            "nsaction_ByToken", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processRecurringTransaction_ByToken", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode processRecurringTransaction_ByToken(System.Xml.XmlNode xmlTransaction) {
             object[] results = this.Invoke("processRecurringTransaction_ByToken", new object[] {
                         xmlTransaction});
@@ -873,8 +857,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/processRecurringTra" +
-            "nsaction_ByToken_nonNet", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/processRecurringTransaction_ByToken_nonNet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string processRecurringTransaction_ByToken_nonNet(string strTransaction) {
             object[] results = this.Invoke("processRecurringTransaction_ByToken_nonNet", new object[] {
                         strTransaction});
@@ -903,7 +886,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/updateToken", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateToken", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode updateToken(System.Xml.XmlNode xmlTransaction) {
             object[] results = this.Invoke("updateToken", new object[] {
                         xmlTransaction});
@@ -932,7 +915,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/updateToken_nonNet", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/updateToken_nonNet", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string updateToken_nonNet(string strTransaction) {
             object[] results = this.Invoke("updateToken_nonNet", new object[] {
                         strTransaction});
@@ -961,8 +944,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_DetailedTran" +
-            "sactions", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_DetailedTransactions", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode export_DetailedTransactions(System.Xml.XmlNode xmlExportRequest) {
             object[] results = this.Invoke("export_DetailedTransactions", new object[] {
                         xmlExportRequest});
@@ -991,8 +973,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_DetailedTran" +
-            "sactions_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_DetailedTransactions_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string export_DetailedTransactions_nonNET(string strXML_ExportRequest) {
             object[] results = this.Invoke("export_DetailedTransactions_nonNET", new object[] {
                         strXML_ExportRequest});
@@ -1021,8 +1002,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_DetailedTran" +
-            "sactions_Update", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_DetailedTransactions_Update", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode export_DetailedTransactions_Update(System.Xml.XmlNode xmlExportRequest) {
             object[] results = this.Invoke("export_DetailedTransactions_Update", new object[] {
                         xmlExportRequest});
@@ -1051,8 +1031,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_DetailedTran" +
-            "sactions_Update_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_DetailedTransactions_Update_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string export_DetailedTransactions_Update_nonNET(string strXML_ExportRequest) {
             object[] results = this.Invoke("export_DetailedTransactions_Update_nonNET", new object[] {
                         strXML_ExportRequest});
@@ -1081,8 +1060,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_checkCredits" +
-            "", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_checkCredits", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode export_checkCredits(System.Xml.XmlNode xmlExportRequest) {
             object[] results = this.Invoke("export_checkCredits", new object[] {
                         xmlExportRequest});
@@ -1111,8 +1089,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_checkReturns" +
-            "", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_checkReturns", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode export_checkReturns(System.Xml.XmlNode xmlExportRequest) {
             object[] results = this.Invoke("export_checkReturns", new object[] {
                         xmlExportRequest});
@@ -1141,8 +1118,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/export_creditCardCr" +
-            "edits", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/export_creditCardCredits", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode export_creditCardCredits(System.Xml.XmlNode xmlExportRequest) {
             object[] results = this.Invoke("export_creditCardCredits", new object[] {
                         xmlExportRequest});
@@ -1171,7 +1147,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/verifyTransaction", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verifyTransaction", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode verifyTransaction(System.Xml.XmlNode xmlVerifyRequest) {
             object[] results = this.Invoke("verifyTransaction", new object[] {
                         xmlVerifyRequest});
@@ -1200,8 +1176,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/verifyTransaction_n" +
-            "onNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verifyTransaction_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string verifyTransaction_nonNET(string strXML_VerifyRequest) {
             object[] results = this.Invoke("verifyTransaction_nonNET", new object[] {
                         strXML_VerifyRequest});
@@ -1230,7 +1205,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/verifyPaymentID", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verifyPaymentID", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode verifyPaymentID(System.Xml.XmlNode xmlPaymentID) {
             object[] results = this.Invoke("verifyPaymentID", new object[] {
                         xmlPaymentID});
@@ -1259,8 +1234,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/verifyPaymentID_non" +
-            "NET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/verifyPaymentID_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string verifyPaymentID_nonNET(string strXML_VerifyRequest) {
             object[] results = this.Invoke("verifyPaymentID_nonNET", new object[] {
                         strXML_VerifyRequest});
@@ -1289,7 +1263,7 @@ namespace SOAP_dontDropIt.com.collectorsolutions.stage {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("https://secure.collectorsolutions.com/CSI_eCollections_Portal/test_nonNET", RequestNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", ResponseNamespace="https://secure.collectorsolutions.com/CSI_eCollections_Portal/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/test_nonNET", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public string test_nonNET(string strTEST) {
             object[] results = this.Invoke("test_nonNET", new object[] {
                         strTEST});

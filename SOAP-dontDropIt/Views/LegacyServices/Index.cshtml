@@ -5,14 +5,18 @@
 
 <h2>Legacy Web Services</h2>
 
-<ul class="list-group">
-    <li class="list-group-item">@Html.ActionLink("Calculate Fee", "CalculateFee")</li>
-    <li class="list-group-item">@Html.ActionLink("Process Transaction", "ProcessTransaction")</li>
-    <li class="list-group-item">@Html.ActionLink("Virtual Terminal Transaction", "VirtualTerminalTransaction")</li>
-    <li class="list-group-item">@Html.ActionLink("Tokenization", "Tokenization")</li>
-    <li class="list-group-item">@Html.ActionLink("Void/Credit Processing", "ProcessCredit")</li>
-    <li class="list-group-item">@Html.ActionLink("Export Methods", "ExportDetailedTransactions")</li>
-    <li class="list-group-item">@Html.ActionLink("Verify Transaction", "VerifyTransaction")</li>
-    <li class="list-group-item">@Html.ActionLink("Payment ID Lookup", "InsertPaymentIdLookup")</li>
-</ul>
+<div class="list-group">
+    <a href="#" class="list-group-item active list-group-bg">
+        List of legacy services methods
+    </a>
+    <a href="legacyservices/CalculateFee" class="list-group-item"><span class="badge">POST</span>Calculate Fee <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="#" class="list-group-item disabled"><span class="badge">POST</span>Process Transaction <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="legacyservices/VirtualTerminalTransactionPost" class="list-group-item"><span class="badge">POST</span>Virtual Terminal Transaction <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="#" class="list-group-item disabled"><span class="badge">GET</span>Virtual Terminal Transaction <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="#" class="list-group-item disabled"><span class="badge">POST</span>Tokenization <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="legacyservices/ExportDetailedTransactions" class="list-group-item"><span class="badge">POST</span>Export Methods <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="legacyservices/ProcessCredit" class="list-group-item"><span class="badge">POST</span>Process Credit <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="legacyservices/VerifyTransaction" class="list-group-item"><span class="badge">POST</span>Verify Transaction <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+    <a href="legacyservices/InsertPaymentIdLookup" class="list-group-item"><span class="badge">POST</span>Payment ID Lookup <i class="fa fa-pied-piper-alt fa-2x" aria-hidden="true"></i></a>
+</div>
 
