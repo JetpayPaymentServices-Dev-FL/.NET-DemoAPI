@@ -219,6 +219,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\favicon.png" />
+    <Content Include="Images\image2016-7-15 9-52-11.png" />
     <Content Include="Images\jetpay-small.png" />
     <Content Include="Images\magic-text-logo.png" />
     <Content Include="Images\magicUtils.png" />
