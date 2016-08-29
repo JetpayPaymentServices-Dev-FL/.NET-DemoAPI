@@ -6,24 +6,22 @@
 {
     <hr>
     <div class="container">
-        <div class="col-md-6 col-md-offset-2" style="padding-left:0;">
+        <div class="col-md-12" style="padding-left:0;">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">Calculate Fee Response</h3>
                 </div>
                 <div class="panel-body">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>Fee Amount</td>
-                                <td>Response Code</td>
-                            </tr>
-                            <tr>
-                                <td><strong>@Model.FEEAMOUNT</strong></td>
-                                <td><strong>@Model.RESPONSECODE</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong class="">Response Code</strong> <div class="">@Model.RESPONSECODE</div>
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Fee Amount</strong> <div class="">@Model.FEEAMOUNT</div>
+
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
         </div> 

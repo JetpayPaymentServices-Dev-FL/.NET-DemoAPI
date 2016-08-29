@@ -48,9 +48,7 @@
     var vtGetResponse = (TempData["VTGetResponse"] as VirtualTerminalTransactionGetResponseModels.VT_TRANSACTION);
 }
 
-    <div>
     @Html.Partial("_VirtualTerminalTransactionGetResponsePartial", vtGetResponse)
-</div>  
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>

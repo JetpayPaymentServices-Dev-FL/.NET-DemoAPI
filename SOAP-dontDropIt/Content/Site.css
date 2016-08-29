@@ -43,11 +43,7 @@ textarea {
 .fa{
   cursor:pointer;
 }
-@media (min-width: 1199px) {
-    footer {
-        margin-bottom: 3%;
-    }
-}
+
 .loader {
     display: none;
     position: fixed;

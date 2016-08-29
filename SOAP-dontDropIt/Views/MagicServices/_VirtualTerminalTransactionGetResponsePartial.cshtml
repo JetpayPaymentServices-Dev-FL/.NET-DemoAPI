@@ -1,33 +1,46 @@
-﻿@model IEnumerable<SOAP_dontDropIt.Models.VirtualTerminalTransactionGetResponseModels>
+﻿@model SOAP_dontDropIt.Models.VirtualTerminalTransactionGetResponseModels.VT_TRANSACTION
 
 
 @if (Model != null)
 {
-<div class="container">
-    <div class="col-md-6 col-md-offset-3" style="padding-left:0;">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h3 class="panel-title">Calculate Fee Response</h3>
-            </div>
-            <div class="panel-body">
-               @foreach (var item in Model)
-               {
-                <div>@item</div>
-               }
-                @*<table class="table">
-                    <tbody>
-                        <tr>
-                            <td>Fee Amount</td>
-                            <td>Response Code</td>
-                        </tr>
-                        <tr>
-                            <td><strong>@Model.FEEAMOUNT</strong></td>
-                            <td><strong>@Model.RESPONSECODE</strong></td>
-                        </tr>
-                    </tbody>
-                </table>*@
+    <hr>
+    <div class="container">
+        <div class="col-md-12" style="padding-left:0;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Virtual Terminal Get Response</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong class="">Transaction Identifier</strong> <div class="">@Model.TRANSACTIONID</div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Account Number</strong> <div class="">@Model.ACCOUNTNUMBER</div>
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Address</strong> <div class="">@Model.ADDRESS</div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Amount</strong> <div class="">@Model.AMOUNT</div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Collection Mode</strong> <div class="">@Model.COLLECTIONMODE</div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">PRC</strong> <div class="">@Model.PRC</div>
+
+                        </li>
+                        <li class="list-group-item">
+                           <div>...Finish building out view for desired info...</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-</div>
-    }
+}
