@@ -62,19 +62,12 @@ namespace SOAP_dontDropIt.Controllers
             try
             {
                 com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
-                //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
                 XmlDocument xmlRequest = new XmlDocument();
+                XMLObjectSerializer obj = new XMLObjectSerializer();
                 var xml = String.Empty;
                 transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp";
                 transaction.PHONE = Regex.Replace(transaction.PHONE, @"\D", "");
-                XmlSerializer xsSubmit = new XmlSerializer(typeof(VirtualTerminalTransactionPostModels.VT_TRANSACTION));
-                using (StringWriter sww = new StringWriter())
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, transaction);
-                    xml = sww.ToString();
-                }
-                xmlRequest.LoadXml(xml);
+                xmlRequest.LoadXml(obj.objectXMLConverter<VirtualTerminalTransactionPostModels.VT_TRANSACTION>(transaction));
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
                 var serializer = new XmlSerializer(typeof(VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION));
                 var response = (VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION)serializer.Deserialize(reader);
@@ -110,17 +103,12 @@ namespace SOAP_dontDropIt.Controllers
                 com.collectorsolutions.secure.legacy.ProcessingGateway ws = new com.collectorsolutions.secure.legacy.ProcessingGateway(); //The web service
                 //Gregg test client key//CIID 9873rfrf5673mjkmnhyu675tr498iu78
                 XmlDocument xmlRequest = new XmlDocument();
+                XMLObjectSerializer obj = new XMLObjectSerializer();
                 var xml = String.Empty;
                 //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp?transID=" + transaction.TRANSACTIONID + "&status=2";
                 //transaction.URLSILENTPOST = @"https://actweb.acttax.com/act_webdev/common/JavaSecure/CollectorSolutions/realtimeNotification.jsp";
                 XmlSerializer xsSubmit = new XmlSerializer(typeof(ProcessTransactionModels.TRANSACTION));
-                using (StringWriter sww = new StringWriter())
-                using (XmlWriter writer = XmlWriter.Create(sww))
-                {
-                    xsSubmit.Serialize(writer, transaction);
-                    xml = sww.ToString();
-                }
-                xmlRequest.LoadXml(xml);
+                xmlRequest.LoadXml(obj.objectXMLConverter<ProcessTransactionModels.TRANSACTION>(transaction));
                 var reader = new StringReader(ws.VT_Transaction_POST(xmlRequest).OuterXml);
                 var serializer = new XmlSerializer(typeof(ProcessTransactionModels.TRANSACTION));
                 var instance = (ProcessTransactionModels.TRANSACTION)serializer.Deserialize(reader);

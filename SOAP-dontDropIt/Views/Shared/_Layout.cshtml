@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="~/Images/favicon.png" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,9 +19,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="@Url.Action("Index", "Home")">
-                    <img src="~/Images/magic-text-logo.png" alt="logo" height="50">
-                    </a>
-</div>
+                    <img src="~/Images/magic-logo-color.png" alt="logo" height="42">
+                </a>
+            </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
@@ -34,7 +34,7 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <br><br>
         <footer>
             <p>
                 <a href="http://www.jetpay.com/payments-products-servies.php" target="_blank"><img src="~/Images/jetpay-small.png" class="img-responsive" /></a>  &copy; @DateTime.Now.Year - JetPay Payments Services, FL, LLC<a class="pull-right" href="http://api.collectorsolutions.com/">CSI Legacy Web Services Documentation</a></p>
