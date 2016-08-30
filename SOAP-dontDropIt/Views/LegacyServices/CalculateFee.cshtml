@@ -84,9 +84,11 @@
 @{
     var calcFeeResponse = (TempData["CalculateFeeResponse"] as CalculateFeeResponseModels.FEE);
 }
-<p>@{
+<p>
+    @{
     Html.RenderPartial("_CalculateFeeResponsePartial", calcFeeResponse);
-}</p>
+}
+</p>
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>

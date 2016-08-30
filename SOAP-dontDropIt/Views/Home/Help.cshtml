@@ -1,10 +1,7 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Help";
 }
-
 <h2>Magic API Help and Support</h2>
-
 <div class="container ">
     <div class="panel-group" id="faqAccordion">
         <div class="panel panel-default ">
@@ -17,7 +14,6 @@
             <div id="question0" class="panel-collapse collapse" style="height: 0px;">
                 <div class="panel-body">
                     <h5><span class="label label-primary">Answer</span></h5>
-
                     <p>
                         TBD, awaiting documentation.
                     </p>
@@ -29,24 +25,24 @@
                 <h4 class="panel-title">
                     <a href="#" class="ing"><span class="label label-default">Question</span>  How do I get TLS 1.2 setup with my API calls?</a>
                 </h4>
-
             </div>
             <div id="question1" class="panel-collapse collapse" style="height: 0px;">
                 <div class="panel-body">
                     <h5><span class="label label-primary">Answer</span></h5>
-
                     <p>
                         Magic Servics call use TLS 1.2 transport security. If you are not using .NET 4.5.2 or higher, you need to follow these steps:
                         <ul>
-                        <li>Close VS 2013</li> 
-                            <li>Install the following extension: <a href="https://visualstudiogallery.msdn.microsoft.com/63750942-1ebe-45dd-bade-552dd850873e" target="_blank">https://visualstudiogallery.msdn.microsoft.com/63750942-1ebe-45dd-bade-552dd850873e</a></li> 
-                            <li>Re-Open the project needing the service reference after installation is complete.</li> 
-                            <li>Go To Tools ->Security Protocol Manager 2013<br>
-                                <img src="~/Images/image2016-7-15 9-52-11.png" /></li> 
+                            <li>Close VS 2013</li>
+                            <li>Install the following extension: <a href="https://visualstudiogallery.msdn.microsoft.com/63750942-1ebe-45dd-bade-552dd850873e" target="_blank">https://visualstudiogallery.msdn.microsoft.com/63750942-1ebe-45dd-bade-552dd850873e</a></li>
+                            <li>Re-Open the project needing the service reference after installation is complete.</li>
+                            <li>
+                                Go To Tools ->Security Protocol Manager 2013<br>
+                                <img src="~/Images/image2016-7-15 9-52-11.png" />
+                            </li>
                             <li>Uncheck Ssl3 and Tls</li>
-                            <li>Check Tls11 and Tls12</li> 
+                            <li>Check Tls11 and Tls12</li>
                             <li>Click Apply</li>
-                            <li>Add service reference to https://stage.collectorsolutions.com/magic-services</li>     
+                            <li>Add service reference to https://stage.collectorsolutions.com/magic-services</li>
                         </ul>
                     </p>
                 </div>
@@ -57,17 +53,18 @@
                 <h4 class="panel-title">
                     <a href="#" class="ing"><span class="label label-default">Question</span>  I want to use Virtual Terminal, where do I start?</a>
                 </h4>
-
             </div>
             <div id="question2" class="panel-collapse collapse" style="height: 0px;">
                 <div class="panel-body">
                     <h5><span class="label label-primary">Answer</span></h5>
-                        <p>URL: /VirtualTerminal/{clientKey}/{transactionid} or URL: /VirtualTerminal/{webKey}/{transactionid}
-This application URL is the primary entry point for Virtual Terminal clients or those clients who push preliminary data via the CSI API and then route the client to this URL to complete the transaction. Please note that both URL parameters {clientid} and {transactionid} are required to begin the Virtual Terminal process from the user interface.
-Again the {clientid} is a multipurpose identifier that can either be the Client's primary key identifier or the Web Client Key. The Client's Client Status must be set to either Production or Test. The {transactionid} URL parameter is the Transaction ID that the client supplied with the Virtual Terminal transaction via the API. If either the {clientid} or {transactionid} are not provided or not found, the application will stop processing immediately. Together, these parameters will uniquely identifier a Virtual Terminal transaction and the CSI Web Application will then redirect the User to the appropriate application page to complete the payment process.
-<br>Examples<br>
-https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/bnkvb43h2jk3 <br>
-https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/8E3F20CE5619431D9BE737FD80E3E990/bnkvb43h2jk3 </p>
+                    <p>
+                        URL: /VirtualTerminal/{clientKey}/{transactionid} or URL: /VirtualTerminal/{webKey}/{transactionid}
+                        This application URL is the primary entry point for Virtual Terminal clients or those clients who push preliminary data via the CSI API and then route the client to this URL to complete the transaction. Please note that both URL parameters {clientid} and {transactionid} are required to begin the Virtual Terminal process from the user interface.
+                        Again the {clientid} is a multipurpose identifier that can either be the Client's primary key identifier or the Web Client Key. The Client's Client Status must be set to either Production or Test. The {transactionid} URL parameter is the Transaction ID that the client supplied with the Virtual Terminal transaction via the API. If either the {clientid} or {transactionid} are not provided or not found, the application will stop processing immediately. Together, these parameters will uniquely identifier a Virtual Terminal transaction and the CSI Web Application will then redirect the User to the appropriate application page to complete the payment process.
+                        <br>Examples<br>
+                        https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/bnkvb43h2jk3 <br>
+                        https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/8E3F20CE5619431D9BE737FD80E3E990/bnkvb43h2jk3
+                    </p>
                 </div>
             </div>
         </div>
@@ -76,13 +73,12 @@ https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/8E3F20CE5619431D9B
                 <h4 class="panel-title">
                     <a href="#" class="ing"><span class="label label-default">Question</span>  How can I get in contact with your developers?</a>
                 </h4>
-
             </div>
             <div id="question3" class="panel-collapse collapse" style="height: 0px;">
                 <div class="panel-body">
                     <h5><span class="label label-primary">Answer</span></h5>
                     <p><a href="mailto:software@collectorsolutions.com">software@collectorsolutions.com</a> Please note: we prefer that developers use this email; technical questions will be asked.</p>
-                 </div>
+                </div>
             </div>
         </div>
 

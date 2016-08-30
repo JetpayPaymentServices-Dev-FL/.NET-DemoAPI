@@ -50,7 +50,7 @@ namespace SOAP_dontDropIt.Controllers
             {
                 return View("Error");
             }
-          
+
         }
         // GET: VirtualTerminalTransaction
         [HttpGet]
@@ -128,7 +128,7 @@ namespace SOAP_dontDropIt.Controllers
             {
                 return View("Error");
             }
-           
+
         }
         // GET: Process Credit
         [HttpGet]
@@ -162,7 +162,7 @@ namespace SOAP_dontDropIt.Controllers
             {
                 return View("Error");
             }
-           
+
         }
 
         // GET: Export detailed transactions
@@ -196,7 +196,7 @@ namespace SOAP_dontDropIt.Controllers
             {
                 return View("Error");
             }
-           
+
         }
     }
 }
