@@ -6,24 +6,21 @@
 {
     <hr>
     <div class="container">
-        <div class="col-md-6 col-md-offset-3" style="padding-left:0;">
+        <div class="col-md-12" style="padding-left:0;">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Virtual Terminal Response</h3>
+                    <h3 class="panel-title">Virtual Terminal Post Response</h3>
                 </div>
                 <div class="panel-body">
-                    <table class="table">
-                        <tbody>
-                            <tr>
-                                <td>Transaction Identifier</td>
-                                <td>Response Code</td>
-                            </tr>
-                            <tr>
-                                <td><strong>@Model.TRANSACTIONID</strong></td>
-                                <td><strong>@Model.RESPONSECODE</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong class="">Transaction Identifier</strong> <div class="">@Model.RESPONSECODE</div>
+
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Account Number</strong> <div class="">@Model.TRANSACTIONID</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

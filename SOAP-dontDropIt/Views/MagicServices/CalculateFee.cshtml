@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Calculate Fee";
 }
-
+<div class="loader"></div>
 <h2>Calculate Fee (POST)</h2>
 
 
@@ -17,6 +17,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.CLIENTKEY, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="Client api key (unique identifier) i.e. '8E3F2...' usually 32 characters in length" aria-hidden="true"></i>
             <div class="col-md-4">
                 @Html.EditorFor(model => model.CLIENTKEY, new { htmlAttributes = new { @class = "form-control", @Value = "8E3F20CE5619431D9BE737FD80E3E990" } })
                 @Html.ValidationMessageFor(model => model.CLIENTKEY, "", new { @class = "text-danger" })
@@ -24,6 +25,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.PAYMENTMETHOD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-html="true" data-original-title="0 for Credit Card<br>1 for Check" aria-hidden="true"></i>
             <div class="col-md-4">
                 @Html.EditorFor(model => model.PAYMENTMETHOD, new { htmlAttributes = new { @class = "form-control", @Value = "0" } })
                 @Html.ValidationMessageFor(model => model.PAYMENTMETHOD, "", new { @class = "text-danger" })
@@ -31,6 +33,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.CARDTYPE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-html="true" data-original-title="3 for AMEX<br>4 for VISA<br>5 for MasterCard<br>6 for Discovery" aria-hidden="true"></i>
             <div class="col-md-4">
                 @Html.EditorFor(model => model.CARDTYPE, new { htmlAttributes = new { @class = "form-control", @Value = "4" } })
                 @Html.ValidationMessageFor(model => model.CARDTYPE, "", new { @class = "text-danger" })
@@ -38,6 +41,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.COLLECTIONMODE, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-html="true" data-original-title="1 for Web<br>2 for POS (manual)<br> 3 for POS (scanned)<br>4 for Tel<br>5 for IVR<br>6 for Email<br>7 for Pre-Authorization<br>8 for Web (other)<br>9 for Mailroom-Dropbox (manual)<br>10 for Mailroom-Dropbox (scanned)" aria-hidden="true"></i>
             <div class="col-md-4">
                 @Html.EditorFor(model => model.COLLECTIONMODE, new { htmlAttributes = new { @class = "form-control", @Value = "1" } })
                 @Html.ValidationMessageFor(model => model.COLLECTIONMODE, "", new { @class = "text-danger" })
@@ -45,6 +49,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.AMOUNT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-html="true" data-original-title="Amount total should equal the sum of all line item amounts" aria-hidden="true"></i>
             <div class="col-md-4">
                 <div class="input-group">
                     <div class="input-group-addon">$</div>
@@ -56,6 +61,7 @@
         </div>
         <div class="form-group">
             @Html.LabelFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, htmlAttributes: new { @class = "control-label col-md-2" })
+            <i class="fa fa-question-circle right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="Client payment type name i.e. 'Business Tax' or whatever client provided as a value. Used for the purpose of a join between the CSI portal and the client's MIS and/or CIS systems" aria-hidden="true"></i>
             <div class="col-md-4">
                 @Html.EditorFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, new { htmlAttributes = new { @class = "form-control", @Value = "Business Tax" } })
                 @Html.ValidationMessageFor(model => model.LINEITEM.CUSTOMERPAYMENTTYPEID, "", new { @class = "text-danger" })
@@ -76,7 +82,7 @@
         <div class="form-group">
 
             <div class="col-md-offset-2 col-md-8">
-                <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
+                <input type="submit" value="Submit" class="btn btn-primary btn-lg btnSubmit" />
             </div>
         </div>
     </div>

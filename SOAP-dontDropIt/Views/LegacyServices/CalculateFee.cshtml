@@ -1,10 +1,10 @@
 ﻿@model SOAP_dontDropIt.Models.CalculateFeeModels.FEE
 @using SOAP_dontDropIt.Models;
 @{
-    ViewBag.Title = "Calculate Fee (POST)";
+    ViewBag.Title = "Calculate Fee";
 }
-
-<h2>Calculate Fee</h2>
+<div class="loader"></div>
+<h2>Calculate Fee (POST)</h2>
 
 
 @using (Html.BeginForm())
@@ -76,7 +76,7 @@
         <div class="form-group">
 
             <div class="col-md-offset-2 col-md-6">
-                <input type="submit" value="Submit" class="btn btn-primary btn-lg" />
+                <input type="submit" value="Submit" class="btn btn-primary btn-lg btnSubmit" />
             </div>
         </div>
     </div>

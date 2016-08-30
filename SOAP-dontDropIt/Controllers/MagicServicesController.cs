@@ -48,9 +48,9 @@ namespace SOAP_dontDropIt.Controllers
             }
             catch (Exception e)
             {
-                Response.Redirect("~/Shared/Error.cshtml");
+                return View("Error");
             }
-            return View();
+          
         }
         // GET: VirtualTerminalTransaction
         [HttpGet]
@@ -93,7 +93,7 @@ namespace SOAP_dontDropIt.Controllers
             }
             catch (Exception e)
             {
-                return Redirect("~/Shared/Error.cshtml");
+                return View("Error");
             }
         }
         // GET: VirtualTerminalTransaction
@@ -126,9 +126,9 @@ namespace SOAP_dontDropIt.Controllers
             }
             catch (Exception e)
             {
-                Response.Redirect("~/Shared/Error.cshtml");
+                return View("Error");
             }
-            return View();
+           
         }
         // GET: Process Credit
         [HttpGet]
@@ -160,9 +160,9 @@ namespace SOAP_dontDropIt.Controllers
             }
             catch (Exception e)
             {
-                Response.Redirect("~/Shared/Error.cshtml");
+                return View("Error");
             }
-            return View();
+           
         }
 
         // GET: Export detailed transactions
@@ -194,9 +194,9 @@ namespace SOAP_dontDropIt.Controllers
             }
             catch (Exception e)
             {
-                Response.Redirect("~/Shared/Error.cshtml");
+                return View("Error");
             }
-            return View();
+           
         }
     }
 }

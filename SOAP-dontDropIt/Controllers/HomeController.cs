@@ -8,7 +8,7 @@ namespace SOAP_dontDropIt.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Launch()
+        public ActionResult Landing()
         {
             return View();
         }

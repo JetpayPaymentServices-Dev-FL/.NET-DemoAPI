@@ -160,7 +160,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CalculateFeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LegacyServicesController.cs" />
     <Compile Include="Controllers\MagicServicesController.cs" />
@@ -261,7 +260,7 @@
     <Content Include="Views\LegacyServices\_VirtualTerminalTransactionGetResponsePartial.cshtml" />
     <Content Include="Views\MagicServices\_VirtualTerminalTransactionGetResponsePartial.cshtml" />
     <Content Include="Views\LegacyServices\VirtualTerminalTransactionPost.cshtml" />
-    <Content Include="Views\Home\Launch.cshtml" />
+    <Content Include="Views\Home\Landing.cshtml" />
     <None Include="Web References\com.collectorsolutions.secure.legacy\ProcessingGateway.disco" />
     <None Include="Web References\com.collectorsolutions.stage\ProcessingGateway.disco" />
     <Content Include="Web.config" />
