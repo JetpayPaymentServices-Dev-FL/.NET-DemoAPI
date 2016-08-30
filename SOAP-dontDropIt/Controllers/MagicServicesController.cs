@@ -1,4 +1,5 @@
-﻿using SOAP_dontDropIt.Helpers;
+﻿using Microsoft.AspNetCore.Cors;
+using SOAP_dontDropIt.Helpers;
 using SOAP_dontDropIt.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,15 @@ using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Controllers
 {
+    //public class AllowCrossSiteJsonAttribute : ActionFilterAttribute
+    //{
+    //    public override void OnActionExecuting(ActionExecutingContext filterContext)
+    //    {
+    //        filterContext.RequestContext.HttpContext.Response.AddHeader("Access-Control-Allow-Origin", "*");
+    //        base.OnActionExecuting(filterContext);
+    //    }
+    //}
+    //[AllowCrossSiteJson]
     public class MagicServicesController : Controller
     {
         // GET: LegacyAPI

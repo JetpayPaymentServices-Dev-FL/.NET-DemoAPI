@@ -7,6 +7,9 @@ function generateAmount() {
 $('.btnGenerate').click(function (event) {
     $.ajax({
         url: 'http://api.randomuser.me/?nat=us',
+        xhrFields: {
+            withCredentials: true
+        },
         dataType: 'json',
         success: function (data) {
             populateRandomData(data.results[0]);
