@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="dotNetAPI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dotNetAPI_www_dev_ProcessingGateway" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www-dev/magic-services/ProcessingGateway.asmx</Value>
+    </Setting>
+    <Setting Name="dotNetAPI_com_collectorsolutions_secure_legacy_ProcessingGateway" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://secure.collectorsolutions.com/CSI_eCollections_Portal/ProcessingGateway.asmx</Value>
+    </Setting>
+    <Setting Name="dotNetAPI_com_collectorsolutions_stage_ProcessingGateway" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://stage.collectorsolutions.com/magic-services/ProcessingGateway.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

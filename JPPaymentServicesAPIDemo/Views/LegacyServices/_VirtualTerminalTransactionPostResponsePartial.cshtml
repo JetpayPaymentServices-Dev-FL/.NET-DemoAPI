@@ -1,0 +1,31 @@
+﻿@model dotNetAPI.Models.VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION
+@using dotNetAPI.Models;
+
+
+@if (Model != null)
+{
+    <hr>
+    <div class="container">
+        <div class="col-md-12" style="padding-left:0;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Virtual Terminal Post Response</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong class="">Transaction Identifier</strong> <div class="">@Model.RESPONSECODE</div>
+                        </li>
+                        <li class="list-group-item">
+                            <strong class="">Account Number</strong> <div class="">@Model.TRANSACTIONID</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
