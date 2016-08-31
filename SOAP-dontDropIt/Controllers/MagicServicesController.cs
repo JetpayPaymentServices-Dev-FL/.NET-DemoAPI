@@ -14,15 +14,6 @@ using System.Xml.Serialization;
 
 namespace SOAP_dontDropIt.Controllers
 {
-    //public class AllowCrossSiteJsonAttribute : ActionFilterAttribute
-    //{
-    //    public override void OnActionExecuting(ActionExecutingContext filterContext)
-    //    {
-    //        filterContext.RequestContext.HttpContext.Response.AddHeader("Access-Control-Allow-Origin", "*");
-    //        base.OnActionExecuting(filterContext);
-    //    }
-    //}
-    //[AllowCrossSiteJson]
     public class MagicServicesController : Controller
     {
         // GET: LegacyAPI
@@ -91,7 +82,6 @@ namespace SOAP_dontDropIt.Controllers
                 var response = (VirtualTerminalTransactionPostResponseModels.VT_TRANSACTION)serializer.Deserialize(reader);
                 //send data to partial view so it can be displayed//
                 TempData["VTPostResponse"] = response;
-                //VirtualTerminal/{clientid}/{transactionid}
                 if (response.RESPONSECODE.StartsWith("Y"))
                 {
                     return Redirect("https://stage.collectorsolutions.com/magic-ui/VirtualTerminal/csi-live/" + response.TRANSACTIONID);
