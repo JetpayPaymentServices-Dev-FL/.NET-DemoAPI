@@ -6,10 +6,8 @@ function generateAmount() {
 }
 $('.btnGenerate').click(function (event) {
     $.ajax({
-        url: 'http://api.randomuser.me/?nat=us',
-        xhrFields: {
-            withCredentials: true
-        },
+        url: 'https://randomuser.me/api/?nat=us',
+        contentType: "application/json; charset=utf-8",
         dataType: 'json',
         success: function (data) {
             populateRandomData(data.results[0]);
@@ -43,7 +41,7 @@ function populateRandomData(obj) {
 };
 $('.btnSubmit').click(function (event) {
     $('.loader').fadeIn(function () {
-        $(this).delay(10000).fadeOut();
+        $(this).delay(15000).fadeOut();
     });
 });
 $('.btnGenerate').click(function (event) {
