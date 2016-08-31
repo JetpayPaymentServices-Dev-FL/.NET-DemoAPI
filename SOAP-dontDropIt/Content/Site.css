@@ -28,6 +28,17 @@ select,
 textarea {
     max-width: 280px;
 }*/
+.container .jumbotron {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+   border-top-right-radius: 0;
+   border-top-left-radius: 0;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ff6600;
+  background-color: transparent;
+}
 .panel-title a:hover, a:focus {
     text-decoration: none;
 }
