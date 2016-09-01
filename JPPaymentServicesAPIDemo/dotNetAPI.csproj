@@ -350,7 +350,9 @@
     <Content Include="Images\ring-alt.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\magic-api - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\magic-api - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\magic-api - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\magic-api - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
